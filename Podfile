@@ -7,6 +7,12 @@ target 'Movies' do
 
   # Pods for Movies
 
+  pod 'RxSwift', '4.5.0'
+  pod 'RxBlocking', '4.5.0'
+  pod 'RxCocoa', '4.5.0'
+  pod 'NSObject+Rx', '4.4.1'
+  pod 'SDWebImage', '5.0.0'
+
   target 'MoviesTests' do
     inherit! :search_paths
     # Pods for testing
