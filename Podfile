@@ -12,6 +12,7 @@ target 'Movies' do
   pod 'RxCocoa', '4.5.0'
   pod 'NSObject+Rx', '4.4.1'
   pod 'SDWebImage', '5.0.0'
+  pod 'KeychainSwift', '16.0.1'
 
   target 'MoviesTests' do
     inherit! :search_paths

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import KeychainSwift
 
 class Settings {
     static let TOKEN = "tkSSA"
@@ -22,10 +23,19 @@ class Settings {
 
     class var sessionId: String? {
         get {
-            return preferences.value(forKey: TOKEN) as? String
+            let keychain = KeychainSwift()
+
+            return keychain.get(TOKEN)
         }
         set {
-            preferences.set(newValue, forKey: TOKEN)
+            let keychain = KeychainSwift()
+
+            if let newValue = newValue {
+                keychain.set(newValue, forKey: TOKEN)
+            }
+            else {
+                keychain.delete(TOKEN)
+            }
         }
     }
 
