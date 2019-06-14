@@ -37,7 +37,10 @@ class MVTabBarController: UITabBarController, UITabBarControllerDelegate {
 
         let homeNavigationController = createNavigationController(HomeViewController(), icon: "home")
 
-        setViewControllers([homeNavigationController], animated: false)
+        let profileNavigationController = createNavigationController(ProfileViewController(), icon: "profile")
+
+        setViewControllers([homeNavigationController,
+                            profileNavigationController], animated: false)
     }
 
     private func createNavigationController(_ viewController: UIViewController, icon: String)
