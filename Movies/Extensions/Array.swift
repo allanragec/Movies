@@ -10,11 +10,8 @@ import Foundation
 
 extension Array {
     public func get(at index: Int) -> Element? {
-        guard (index + 1) <= count else {
-            return nil
-        }
+        guard indices.contains(index) else { return nil }
 
         return self[index]
     }
-
 }
