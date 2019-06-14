@@ -14,6 +14,12 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var profileLabel: UILabel?
     @IBOutlet weak var loginLogouButton: UIButton?
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        title = "Profile"
+    }
+
     @IBAction func loginAction() {
         if Settings.isLogged {
             Settings.clearSession()

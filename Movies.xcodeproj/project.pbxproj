@@ -38,6 +38,9 @@
 		D2C623E322B353E4004FA027 /* GetAccountInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C623E222B353E4004FA027 /* GetAccountInteractorTest.swift */; };
 		D2C623E722B35EA4004FA027 /* GetUpcomingMoviesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C623E622B35EA4004FA027 /* GetUpcomingMoviesInteractor.swift */; };
 		D2C623EA22B360D2004FA027 /* GetUpcomingMoviesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C623E822B360A5004FA027 /* GetUpcomingMoviesTest.swift */; };
+		D2C623EE22B3652C004FA027 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C623EC22B3652C004FA027 /* MovieCollectionViewCell.swift */; };
+		D2C623EF22B3652C004FA027 /* MovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2C623ED22B3652C004FA027 /* MovieCollectionViewCell.xib */; };
+		D2C623F122B36999004FA027 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C623F022B36999004FA027 /* Array.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +93,9 @@
 		D2C623E222B353E4004FA027 /* GetAccountInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAccountInteractorTest.swift; sourceTree = "<group>"; };
 		D2C623E622B35EA4004FA027 /* GetUpcomingMoviesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUpcomingMoviesInteractor.swift; sourceTree = "<group>"; };
 		D2C623E822B360A5004FA027 /* GetUpcomingMoviesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUpcomingMoviesTest.swift; sourceTree = "<group>"; };
+		D2C623EC22B3652C004FA027 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
+		D2C623ED22B3652C004FA027 /* MovieCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCollectionViewCell.xib; sourceTree = "<group>"; };
+		D2C623F022B36999004FA027 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		E1BB608056EE34C9DD0CFD30 /* Pods-Movies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movies.release.xcconfig"; path = "Target Support Files/Pods-Movies/Pods-Movies.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,6 +168,7 @@
 		D2C3200A22B2E7FF00263DAB /* Movies */ = {
 			isa = PBXGroup;
 			children = (
+				D2C623EB22B36508004FA027 /* SharedCells */,
 				D2C623BE22B326BF004FA027 /* Extensions */,
 				D2C623B622B3253B004FA027 /* Interactors */,
 				D240E08922B3062900D498C7 /* ViewControllers */,
@@ -214,6 +221,7 @@
 				D2C623C122B32729004FA027 /* DateFormatter.swift */,
 				D2C623C322B32743004FA027 /* Dictionary.swift */,
 				D2C623C522B327BE004FA027 /* Observable.swift */,
+				D2C623F022B36999004FA027 /* Array.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -228,6 +236,15 @@
 				D2C623E822B360A5004FA027 /* GetUpcomingMoviesTest.swift */,
 			);
 			path = Interactors;
+			sourceTree = "<group>";
+		};
+		D2C623EB22B36508004FA027 /* SharedCells */ = {
+			isa = PBXGroup;
+			children = (
+				D2C623EC22B3652C004FA027 /* MovieCollectionViewCell.swift */,
+				D2C623ED22B3652C004FA027 /* MovieCollectionViewCell.xib */,
+			);
+			path = SharedCells;
 			sourceTree = "<group>";
 		};
 		E50C11DF6137BE39DB87F5ED /* Frameworks */ = {
@@ -330,6 +347,7 @@
 				D2C3201322B2E80100263DAB /* Assets.xcassets in Resources */,
 				D2C623B522B31AE9004FA027 /* ProfileViewController.xib in Resources */,
 				D240E08F22B3071300D498C7 /* HomeViewController.xib in Resources */,
+				D2C623EF22B3652C004FA027 /* MovieCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +445,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2C623D622B34170004FA027 /* CreateSessionInteractor.swift in Sources */,
+				D2C623F122B36999004FA027 /* Array.swift in Sources */,
 				D2C623D122B33ACC004FA027 /* LoginViewController.swift in Sources */,
 				D2C623DD22B35080004FA027 /* ValidateWithLoginInteractor.swift in Sources */,
 				D2C623C622B327BE004FA027 /* Observable.swift in Sources */,
@@ -438,6 +457,7 @@
 				D2C3200C22B2E7FF00263DAB /* AppDelegate.swift in Sources */,
 				D2C623C022B326FE004FA027 /* Codable.swift in Sources */,
 				D2C623C822B327D9004FA027 /* CreateRequestTokenInteractor.swift in Sources */,
+				D2C623EE22B3652C004FA027 /* MovieCollectionViewCell.swift in Sources */,
 				D2C623B422B31AE9004FA027 /* ProfileViewController.swift in Sources */,
 				D2C623BB22B325A0004FA027 /* LoaderDataFromServer.swift in Sources */,
 				D2C623B922B32584004FA027 /* LoaderObservable.swift in Sources */,
