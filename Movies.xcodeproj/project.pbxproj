@@ -27,6 +27,10 @@
 		D2C623C822B327D9004FA027 /* CreateRequestTokenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C623C722B327D9004FA027 /* CreateRequestTokenInteractor.swift */; };
 		D2C623CB22B32CB4004FA027 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C623CA22B32CB4004FA027 /* Settings.swift */; };
 		D2C623CE22B32E88004FA027 /* CreateRequestTokenInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C623CD22B32E88004FA027 /* CreateRequestTokenInteractorTest.swift */; };
+		D2C623D122B33ACC004FA027 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C623CF22B33ACC004FA027 /* LoginViewController.swift */; };
+		D2C623D222B33ACC004FA027 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2C623D022B33ACC004FA027 /* LoginViewController.xib */; };
+		D2C623D422B33DFB004FA027 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C623D322B33DFB004FA027 /* WebKit.framework */; };
+		D2C623D622B34170004FA027 /* CreateSessionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C623D522B34170004FA027 /* CreateSessionInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +72,10 @@
 		D2C623CA22B32CB4004FA027 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		D2C623CC22B32E87004FA027 /* UnitTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnitTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		D2C623CD22B32E88004FA027 /* CreateRequestTokenInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRequestTokenInteractorTest.swift; sourceTree = "<group>"; };
+		D2C623CF22B33ACC004FA027 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D2C623D022B33ACC004FA027 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		D2C623D322B33DFB004FA027 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		D2C623D522B34170004FA027 /* CreateSessionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSessionInteractor.swift; sourceTree = "<group>"; };
 		E1BB608056EE34C9DD0CFD30 /* Pods-Movies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movies.release.xcconfig"; path = "Target Support Files/Pods-Movies/Pods-Movies.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2C623D422B33DFB004FA027 /* WebKit.framework in Frameworks */,
 				62B34857606529F23BDB8C6F /* Pods_Movies.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -110,6 +119,8 @@
 				D240E08D22B3071300D498C7 /* HomeViewController.xib */,
 				D2C623B222B31AE9004FA027 /* ProfileViewController.swift */,
 				D2C623B322B31AE9004FA027 /* ProfileViewController.xib */,
+				D2C623CF22B33ACC004FA027 /* LoginViewController.swift */,
+				D2C623D022B33ACC004FA027 /* LoginViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -163,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				D2C623C722B327D9004FA027 /* CreateRequestTokenInteractor.swift */,
+				D2C623D522B34170004FA027 /* CreateSessionInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -200,6 +212,7 @@
 		E50C11DF6137BE39DB87F5ED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D2C623D322B33DFB004FA027 /* WebKit.framework */,
 				727C14D04D7D8C3B5DA7AA86 /* Pods_Movies.framework */,
 				ADF15FA546C7DA3A2590521B /* Pods_MoviesTests.framework */,
 			);
@@ -291,6 +304,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2C623D222B33ACC004FA027 /* LoginViewController.xib in Resources */,
 				D2C3201622B2E80100263DAB /* LaunchScreen.storyboard in Resources */,
 				D2C3201322B2E80100263DAB /* Assets.xcassets in Resources */,
 				D2C623B522B31AE9004FA027 /* ProfileViewController.xib in Resources */,
@@ -389,6 +403,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2C623D622B34170004FA027 /* CreateSessionInteractor.swift in Sources */,
+				D2C623D122B33ACC004FA027 /* LoginViewController.swift in Sources */,
 				D2C623C622B327BE004FA027 /* Observable.swift in Sources */,
 				D2C623C222B32729004FA027 /* DateFormatter.swift in Sources */,
 				D2C623CB22B32CB4004FA027 /* Settings.swift in Sources */,

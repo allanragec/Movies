@@ -10,5 +10,6 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     @IBAction func loginAction() {
+        navigationController?.present(LoginViewController(), animated: true)
     }
 }

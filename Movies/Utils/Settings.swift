@@ -17,10 +17,10 @@ class Settings {
     static let API_KEY = ""
 
     class var isLogged: Bool {
-        return accessToken != nil
+        return sessionId != nil
     }
 
-    class var accessToken: String? {
+    class var sessionId: String? {
         get {
             return preferences.value(forKey: TOKEN) as? String
         }
@@ -53,12 +53,12 @@ class Settings {
 
     class func saveSession(email: String, accessToken: String, expirationDate: Double) {
         self.email = email
-        self.accessToken = accessToken
+        self.sessionId = accessToken
     }
 
     class func clearSession() {
         email = nil
-        accessToken = nil
+        sessionId = nil
     }
 
     class var preferences: UserDefaults {
