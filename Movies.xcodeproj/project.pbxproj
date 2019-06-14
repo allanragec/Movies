@@ -26,6 +26,7 @@
 		D2C623C622B327BE004FA027 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C623C522B327BE004FA027 /* Observable.swift */; };
 		D2C623C822B327D9004FA027 /* CreateRequestTokenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C623C722B327D9004FA027 /* CreateRequestTokenInteractor.swift */; };
 		D2C623CB22B32CB4004FA027 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C623CA22B32CB4004FA027 /* Settings.swift */; };
+		D2C623CE22B32E88004FA027 /* CreateRequestTokenInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C623CD22B32E88004FA027 /* CreateRequestTokenInteractorTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		D2C623C722B327D9004FA027 /* CreateRequestTokenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRequestTokenInteractor.swift; sourceTree = "<group>"; };
 		D2C623CA22B32CB4004FA027 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		D2C623CC22B32E87004FA027 /* UnitTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnitTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		D2C623CD22B32E88004FA027 /* CreateRequestTokenInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRequestTokenInteractorTest.swift; sourceTree = "<group>"; };
 		E1BB608056EE34C9DD0CFD30 /* Pods-Movies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movies.release.xcconfig"; path = "Target Support Files/Pods-Movies/Pods-Movies.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,6 +159,14 @@
 			path = UnitTests;
 			sourceTree = "<group>";
 		};
+		D2C623B622B3253B004FA027 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				D2C623C722B327D9004FA027 /* CreateRequestTokenInteractor.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
 		D2C623B722B32573004FA027 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +189,12 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		D2C623C922B32C60004FA027 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				D2C623CD22B32E88004FA027 /* CreateRequestTokenInteractorTest.swift */,
+			);
+			path = Interactors;
 			sourceTree = "<group>";
 		};
 		E50C11DF6137BE39DB87F5ED /* Frameworks */ = {
@@ -380,6 +396,7 @@
 				D240E08B22B3066F00D498C7 /* MVTabBarController.swift in Sources */,
 				D2C3200C22B2E7FF00263DAB /* AppDelegate.swift in Sources */,
 				D2C623C022B326FE004FA027 /* Codable.swift in Sources */,
+				D2C623C822B327D9004FA027 /* CreateRequestTokenInteractor.swift in Sources */,
 				D2C623B422B31AE9004FA027 /* ProfileViewController.swift in Sources */,
 				D2C623BB22B325A0004FA027 /* LoaderDataFromServer.swift in Sources */,
 				D2C623B922B32584004FA027 /* LoaderObservable.swift in Sources */,
@@ -392,6 +409,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2C623CE22B32E88004FA027 /* CreateRequestTokenInteractorTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -54,13 +54,11 @@ class Settings {
     class func saveSession(email: String, accessToken: String, expirationDate: Double) {
         self.email = email
         self.accessToken = accessToken
-        self.expirationDate = expirationDate
     }
 
     class func clearSession() {
         email = nil
         accessToken = nil
-        expirationDate = nil
     }
 
     class var preferences: UserDefaults {
