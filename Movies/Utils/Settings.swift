@@ -14,6 +14,7 @@ class Settings {
     static let EMAIL = "email"
     static let EXPIRATION_DATE = "expirationDate"
     static let REQUEST_TOKEN = "requestToken"
+    static let USER_ACCOUNT = "userAccount"
 
     static let API_KEY = ""
 
@@ -61,6 +62,19 @@ class Settings {
         }
     }
 
+    class var userAccount: AccountResult? {
+        get {
+            guard let data = preferences.value(forKey: USER_ACCOUNT) as? Data else {
+                return nil
+            }
+
+            return try? AccountResult(with: data)
+        }
+        set {
+            preferences.set(newValue.asData(), forKey: USER_ACCOUNT)
+        }
+    }
+
     class func saveSession(email: String, accessToken: String, expirationDate: Double) {
         self.email = email
         self.sessionId = accessToken
@@ -69,6 +83,7 @@ class Settings {
     class func clearSession() {
         email = nil
         sessionId = nil
+        requestToken = nil
     }
 
     class var preferences: UserDefaults {

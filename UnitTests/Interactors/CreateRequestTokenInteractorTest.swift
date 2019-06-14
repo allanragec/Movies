@@ -15,7 +15,7 @@ class CreateRequestTokenInteractorTest: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        Settings.requestToken = nil
+        Settings.clearSession()
     }
 
     func testCreateRequestTokenInteractor() {
