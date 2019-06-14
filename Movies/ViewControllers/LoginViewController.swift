@@ -21,7 +21,7 @@ class LoginViewController: UIViewController {
 
         let backgroundThread = ConcurrentDispatchQueueScheduler(qos: .background)
 
-        loadingIndicator?.isHidden = false
+        loadingIndicator?.startAnimating()
 
         CreateRequestTokenInteractor()
             .execute()
@@ -39,11 +39,14 @@ class LoginViewController: UIViewController {
                 print(error)
             },
             onCompleted: { [weak self] in
-                self?.loadingIndicator?.isHidden = true
+                self?.loadingIndicator?.stopAnimating()
             })
             .disposed(by: rx.disposeBag)
     }
 
+    @IBAction func closeAction(_ sender: Any) {
+        dismiss(animated: true)
+    }
 }
 
 extension LoginViewController: WKNavigationDelegate {
@@ -58,7 +61,7 @@ extension LoginViewController: WKNavigationDelegate {
         if currentUrl.absoluteString == authenticateRequest.appending("/allow") {
             let backgroundThread = ConcurrentDispatchQueueScheduler(qos: .background)
 
-            loadingIndicator?.isHidden = false
+            loadingIndicator?.startAnimating()
 
             CreateSessionInteractor()
                 .execute()
@@ -73,9 +76,12 @@ extension LoginViewController: WKNavigationDelegate {
                     print(error)
                 },
                 onCompleted: { [weak self] in
-                    self?.loadingIndicator?.isHidden = true
+                    self?.loadingIndicator?.stopAnimating()
                 })
                 .disposed(by: rx.disposeBag)
+        }
+        else if currentUrl.absoluteString == authenticateRequest.appending("/deny") {
+            dismiss(animated: true)
         }
     }
 }

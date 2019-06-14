@@ -23,26 +23,49 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <wkWebView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7NO-dJ-QLg">
-                    <rect key="frame" x="0.0" y="5" width="414" height="896"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <wkWebViewConfiguration key="configuration">
                         <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                         <wkPreferences key="preferences"/>
                     </wkWebViewConfiguration>
                 </wkWebView>
-                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="WGQ-bM-3Pq">
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="WGQ-bM-3Pq">
                     <rect key="frame" x="197" y="443" width="20" height="20"/>
                     <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </activityIndicatorView>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ovc-a5-MYc">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <items>
+                        <navigationItem title="Login" id="7Jm-iY-gkF">
+                            <barButtonItem key="rightBarButtonItem" style="plain" id="ztz-ZP-XkA">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="f0F-Ry-UJd">
+                                    <rect key="frame" x="302" y="7" width="92" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Close"/>
+                                    <connections>
+                                        <action selector="closeAction:" destination="-1" eventType="touchUpInside" id="MhM-Ft-mrz"/>
+                                    </connections>
+                                </button>
+                                <connections>
+                                    <action selector="closeAction:" destination="-1" id="dDK-Hg-uHK"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="7NO-dJ-QLg" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="3cz-YZ-iox"/>
-                <constraint firstItem="7NO-dJ-QLg" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="7jT-cI-Dzi"/>
-                <constraint firstItem="7NO-dJ-QLg" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Dyt-da-eQF"/>
-                <constraint firstItem="7NO-dJ-QLg" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" id="RFQ-fy-EqC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="7NO-dJ-QLg" secondAttribute="top" id="C5d-Jm-OJN"/>
+                <constraint firstItem="ovc-a5-MYc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="H8m-W9-Lz6"/>
+                <constraint firstItem="ovc-a5-MYc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="NYG-nV-IHH"/>
+                <constraint firstItem="7NO-dJ-QLg" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="aND-VV-t9L"/>
                 <constraint firstItem="WGQ-bM-3Pq" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="iOa-B7-r15"/>
+                <constraint firstItem="7NO-dJ-QLg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="jj4-Jp-cqd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ovc-a5-MYc" secondAttribute="trailing" id="mrf-lo-YHO"/>
                 <constraint firstItem="WGQ-bM-3Pq" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="vhl-Hg-qml"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7NO-dJ-QLg" secondAttribute="trailing" id="wz6-05-ovp"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
