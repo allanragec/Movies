@@ -7,9 +7,44 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ProfileViewController: UIViewController {
+    @IBOutlet weak var profileImage: UIImageView?
+    @IBOutlet weak var profileLabel: UILabel?
+    @IBOutlet weak var loginLogouButton: UIButton?
+
     @IBAction func loginAction() {
-        navigationController?.present(LoginViewController(), animated: true)
+        if Settings.isLogged {
+            Settings.clearSession()
+            setupLayout()
+        }
+        else {
+            navigationController?.present(LoginViewController(), animated: true)
+        }
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        setupLayout()
+    }
+
+    private func setupLayout() {
+        let isLogged = Settings.isLogged
+
+        loginLogouButton?.setTitle(Settings.isLogged ? "Logout" : "Login", for: .normal)
+
+        if isLogged {
+            let userAccount = Settings.userAccount
+            let gravatarHash = userAccount?.avatar?.gravatar?.hash ?? ""
+
+            profileImage?.sd_setImage(with: URL(string: "https://www.gravatar.com/avatar/\(gravatarHash)"))
+            profileLabel?.text = userAccount?.username
+        }
+        else {
+            profileImage?.image = nil
+            profileLabel?.text = nil
+        }
     }
 }

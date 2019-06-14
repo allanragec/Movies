@@ -12,6 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="Movies" customModuleProvider="target">
             <connections>
+                <outlet property="loginLogouButton" destination="SHr-DI-WlH" id="qLZ-2x-45L"/>
+                <outlet property="profileImage" destination="1SY-cw-mlo" id="jxm-Zo-A74"/>
+                <outlet property="profileLabel" destination="UUy-pf-A37" id="tTJ-4d-v9o"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,9 +23,26 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHr-DI-WlH">
-                    <rect key="frame" x="61" y="80" width="38" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1SY-cw-mlo">
+                    <rect key="frame" x="26" y="84" width="94" height="94"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="94" id="LfH-FI-J8H"/>
+                        <constraint firstAttribute="height" constant="94" id="eLG-Xo-rgM"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="47"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUy-pf-A37">
+                    <rect key="frame" x="137" y="84" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHr-DI-WlH">
+                    <rect key="frame" x="188" y="812" width="38" height="30"/>
                     <state key="normal" title="Login"/>
                     <connections>
                         <action selector="loginAction" destination="-1" eventType="touchUpInside" id="fbr-1g-Gg6"/>
@@ -30,7 +50,16 @@
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="SHr-DI-WlH" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="7Ab-3o-cUl"/>
+                <constraint firstItem="1SY-cw-mlo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="26" id="Ibq-CC-XMV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="SHr-DI-WlH" secondAttribute="bottom" constant="20" id="ZIf-DW-AYw"/>
+                <constraint firstItem="UUy-pf-A37" firstAttribute="leading" secondItem="1SY-cw-mlo" secondAttribute="trailing" constant="17" id="dxB-DS-pXg"/>
+                <constraint firstItem="1SY-cw-mlo" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="fhJ-d7-IQI"/>
+                <constraint firstItem="UUy-pf-A37" firstAttribute="top" secondItem="1SY-cw-mlo" secondAttribute="top" id="ieJ-av-Ya6"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="47.826086956521742" y="35.491071428571423"/>
         </view>
     </objects>
 </document>

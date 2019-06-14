@@ -84,6 +84,7 @@ class Settings {
         email = nil
         sessionId = nil
         requestToken = nil
+        userAccount = nil
     }
 
     class var preferences: UserDefaults {

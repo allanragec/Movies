@@ -62,6 +62,7 @@ extension LoginViewController: WKNavigationDelegate {
 
             CreateSessionInteractor()
                 .execute()
+                .flatMap { _ in GetAccountInteractor().execute() }
                 .subscribeOn(backgroundThread)
                 .observeOn(MainScheduler.instance)
                 .subscribe(
