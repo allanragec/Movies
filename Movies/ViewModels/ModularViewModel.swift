@@ -30,9 +30,9 @@ extension ModularViewModel {
     func createCell(for index: IndexPath) -> UITableViewCell {
         let items = getItems()
 
-        guard let tableView = getTableView(), index.row < items.count else { return UITableViewCell(frame: CGRect.zero) }
-
-        let item = items[index.row]
+        guard let tableView = getTableView(),
+            let item = items.get(at: index.row)
+            else { return UITableViewCell(frame: CGRect.zero) }
 
         return item.cell(tableView: tableView, indexPath: index)
     }
