@@ -12,7 +12,7 @@ class HomeViewModel {
 
     weak var viewController: HomeViewController?
 
-    let cell = "MovieCollectionViewCell"
+    let cell = MovieCollectionViewCell.className
 
     var results: [Movie] = []
     var lastResult: UpcomingMoviesResult?
@@ -79,6 +79,13 @@ class HomeViewModel {
         if (remainingItemsCount < treshHolderLimit) && !hasRequestRunning {
             loadMovies()
         }
+    }
+
+    func didSelectItem(at indexPath: IndexPath) {
+        guard let movie = results.get(at: indexPath.row) else { return }
+
+        let movieDetailsViewController = MovieDetailsViewController(movie: movie)
+        viewController?.navigationController?.pushViewController(movieDetailsViewController, animated: true)
     }
 
     // MARK: - URL tasks

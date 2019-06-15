@@ -42,6 +42,11 @@
 		D2C623EE22B3652C004FA027 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C623EC22B3652C004FA027 /* MovieCollectionViewCell.swift */; };
 		D2C623EF22B3652C004FA027 /* MovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2C623ED22B3652C004FA027 /* MovieCollectionViewCell.xib */; };
 		D2C623F122B36999004FA027 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C623F022B36999004FA027 /* Array.swift */; };
+		D2DABF5222B48449003DBB32 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DABF5022B48449003DBB32 /* MovieDetailsViewController.swift */; };
+		D2DABF5322B48449003DBB32 /* MovieDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2DABF5122B48449003DBB32 /* MovieDetailsViewController.xib */; };
+		D2DABF5522B490CD003DBB32 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DABF5422B490CD003DBB32 /* UIViewController.swift */; };
+		D2DABF5722B49491003DBB32 /* MovieDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DABF5622B49491003DBB32 /* MovieDetailsViewModel.swift */; };
+		D2DABF5922B4952E003DBB32 /* UIResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DABF5822B4952E003DBB32 /* UIResponder.swift */; };
 		D2DABF5B22B49A6A003DBB32 /* ModularViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DABF5A22B49A6A003DBB32 /* ModularViewController.swift */; };
 		D2DABF5D22B49A87003DBB32 /* ModularViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DABF5C22B49A87003DBB32 /* ModularViewModel.swift */; };
 		D2DABF6022B49AF1003DBB32 /* CellItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DABF5F22B49AF1003DBB32 /* CellItemController.swift */; };
@@ -101,6 +106,11 @@
 		D2C623EC22B3652C004FA027 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		D2C623ED22B3652C004FA027 /* MovieCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCollectionViewCell.xib; sourceTree = "<group>"; };
 		D2C623F022B36999004FA027 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		D2DABF5022B48449003DBB32 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
+		D2DABF5122B48449003DBB32 /* MovieDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailsViewController.xib; sourceTree = "<group>"; };
+		D2DABF5422B490CD003DBB32 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		D2DABF5622B49491003DBB32 /* MovieDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewModel.swift; sourceTree = "<group>"; };
+		D2DABF5822B4952E003DBB32 /* UIResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIResponder.swift; sourceTree = "<group>"; };
 		D2DABF5A22B49A6A003DBB32 /* ModularViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModularViewController.swift; sourceTree = "<group>"; };
 		D2DABF5C22B49A87003DBB32 /* ModularViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModularViewModel.swift; sourceTree = "<group>"; };
 		D2DABF5F22B49AF1003DBB32 /* CellItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellItemController.swift; sourceTree = "<group>"; };
@@ -149,6 +159,8 @@
 				D2C623B322B31AE9004FA027 /* ProfileViewController.xib */,
 				D2C623CF22B33ACC004FA027 /* LoginViewController.swift */,
 				D2C623D022B33ACC004FA027 /* LoginViewController.xib */,
+				D2DABF5022B48449003DBB32 /* MovieDetailsViewController.swift */,
+				D2DABF5122B48449003DBB32 /* MovieDetailsViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -157,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				D24373DA22B47E270012C737 /* HomeViewModel.swift */,
+				D2DABF5622B49491003DBB32 /* MovieDetailsViewModel.swift */,
 				D2DABF5C22B49A87003DBB32 /* ModularViewModel.swift */,
 			);
 			path = ViewModels;
@@ -241,6 +254,8 @@
 				D2C623C322B32743004FA027 /* Dictionary.swift */,
 				D2C623C522B327BE004FA027 /* Observable.swift */,
 				D2C623F022B36999004FA027 /* Array.swift */,
+				D2DABF5422B490CD003DBB32 /* UIViewController.swift */,
+				D2DABF5822B4952E003DBB32 /* UIResponder.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -374,6 +389,7 @@
 				D2C3201622B2E80100263DAB /* LaunchScreen.storyboard in Resources */,
 				D2C3201322B2E80100263DAB /* Assets.xcassets in Resources */,
 				D2C623B522B31AE9004FA027 /* ProfileViewController.xib in Resources */,
+				D2DABF5322B48449003DBB32 /* MovieDetailsViewController.xib in Resources */,
 				D240E08F22B3071300D498C7 /* HomeViewController.xib in Resources */,
 				D2C623EF22B3652C004FA027 /* MovieCollectionViewCell.xib in Resources */,
 			);
@@ -480,7 +496,10 @@
 				D2C623DD22B35080004FA027 /* ValidateWithLoginInteractor.swift in Sources */,
 				D2C623C622B327BE004FA027 /* Observable.swift in Sources */,
 				D2C623E722B35EA4004FA027 /* GetUpcomingMoviesInteractor.swift in Sources */,
+				D2DABF5522B490CD003DBB32 /* UIViewController.swift in Sources */,
 				D2C623C222B32729004FA027 /* DateFormatter.swift in Sources */,
+				D2DABF5922B4952E003DBB32 /* UIResponder.swift in Sources */,
+				D2DABF5722B49491003DBB32 /* MovieDetailsViewModel.swift in Sources */,
 				D2C623CB22B32CB4004FA027 /* Settings.swift in Sources */,
 				D2C623C422B32743004FA027 /* Dictionary.swift in Sources */,
 				D240E08B22B3066F00D498C7 /* MVTabBarController.swift in Sources */,
@@ -490,6 +509,7 @@
 				D2C623EE22B3652C004FA027 /* MovieCollectionViewCell.swift in Sources */,
 				D2C623B422B31AE9004FA027 /* ProfileViewController.swift in Sources */,
 				D2C623BB22B325A0004FA027 /* LoaderDataFromServer.swift in Sources */,
+				D2DABF5222B48449003DBB32 /* MovieDetailsViewController.swift in Sources */,
 				D24373DB22B47E270012C737 /* HomeViewModel.swift in Sources */,
 				D2C623B922B32584004FA027 /* LoaderObservable.swift in Sources */,
 				D2C623DA22B34B9A004FA027 /* GetAccountInteractor.swift in Sources */,
