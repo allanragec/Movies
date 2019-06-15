@@ -72,11 +72,9 @@ class HomeViewModel {
     // MARK: - UICollectionViewDelegate
 
     func willDisplay(at indexPath: IndexPath) {
-        let treshHolderLimit = 5
-        let remainingItemsCount = results.count - indexPath.row
         let hasRequestRunning = upcomingMoviesDisposable != nil
 
-        if (remainingItemsCount < treshHolderLimit) && !hasRequestRunning {
+        if needToShowMore(row: indexPath.row) && !hasRequestRunning {
             loadMovies()
         }
     }
@@ -108,6 +106,15 @@ class HomeViewModel {
         return CGSize(width: width, height: height)
     }
 
+    // MARK: - Util
+
+    private func needToShowMore(row: Int) -> Bool {
+        let treshHolderLimit = 5
+        let remainingItemsCount = results.count - row
+
+        return remainingItemsCount < treshHolderLimit
+    }
+
     // MARK: - URL tasks
 
     private func loadMovies() {
@@ -136,6 +143,15 @@ class HomeViewModel {
             },
             onCompleted: { [weak self] in
                 self?.upcomingMoviesDisposable = nil
+
+                guard let strongSelf = self,
+                    let collectionView = strongSelf.viewController?.collectionView,
+                    let lastIndexPath = collectionView.indexPathsForVisibleItems.last
+                    else { return }
+
+                if strongSelf.needToShowMore(row: lastIndexPath.row) {
+                    strongSelf.loadMovies()
+                }
             })
     }
 }
