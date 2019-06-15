@@ -44,6 +44,7 @@ class HomeViewModel {
         let nibCell = UINib(nibName: cell, bundle: nil)
 
         viewController?.collectionView?.register(nibCell, forCellWithReuseIdentifier: cell)
+        viewController?.navigationController?.navigationBar.isHidden = true
 
         loadMovies()
     }
