@@ -6,7 +6,7 @@
 //  Copyright © 2019 Allan Melo. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class MovieDetailsViewModel {
 
@@ -19,6 +19,23 @@ class MovieDetailsViewModel {
     }
 
     func viewDidLoad() {
-         viewController?.removeBackTitle()
+        viewController?.title = viewController?.movie.title
+        viewController?.removeBackTitle()
+    }
+}
+
+extension MovieDetailsViewModel: ModularViewModel {
+    func refresh() {
+    }
+
+    func registerCellItems() {
+    }
+
+    func getTableView() -> UITableView? {
+        return viewController?.tableView
+    }
+
+    func getItems() -> [CellItemController] {
+        return []
     }
 }

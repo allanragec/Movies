@@ -8,7 +8,9 @@
 
 import UIKit
 
-class MovieDetailsViewController: UIViewController {
+class MovieDetailsViewController: ModularViewController<MovieDetailsViewModel> {
+
+    @IBOutlet weak var tableView: UITableView?
 
     let movie: Movie
 
@@ -20,8 +22,6 @@ class MovieDetailsViewController: UIViewController {
         self.movie = movie
 
         super.init(nibName: MovieDetailsViewController.className, bundle: nil)
-
-        title = movie.title
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -32,5 +32,13 @@ class MovieDetailsViewController: UIViewController {
         super.viewDidLoad()
 
         viewModel.viewDidLoad()
+    }
+
+    override func getTableView() -> UITableView? {
+        return tableView
+    }
+
+    override func getViewModel() -> MovieDetailsViewModel {
+        return viewModel
     }
 }

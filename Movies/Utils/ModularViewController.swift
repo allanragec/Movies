@@ -22,9 +22,9 @@ class ModularViewController<T : ModularViewModel> : UIViewController, UITableVie
 
         let tableView = getTableView()
 
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.addSubview(refreshControl)
+        tableView?.delegate = self
+        tableView?.dataSource = self
+        tableView?.addSubview(refreshControl)
 
         getViewModel().viewDidLoad()
     }
@@ -37,7 +37,7 @@ class ModularViewController<T : ModularViewModel> : UIViewController, UITableVie
         fatalError("you need to implement your viewModel")
     }
 
-    func getTableView() -> UITableView {
+    func getTableView() -> UITableView? {
         fatalError("you need to implement your tableView")
     }
 
