@@ -17,6 +17,19 @@ class GetUpcomingMoviesInteractor {
 
     func execute() -> Observable<UpcomingMoviesResult> {
         return createObservable()
+            .map({ resultServer in
+                let upcomingMovies = resultServer
+                    .results
+                    .filter({ $0.releaseDateAsDate().isTodayOrFuture() })
+                    .sorted(by: { first, second in
+                        return first.releaseDateAsDate().timeIntervalSince1970 <
+                            second.releaseDateAsDate().timeIntervalSince1970
+                    })
+
+                return UpcomingMoviesResult(results: upcomingMovies,
+                                            page: resultServer.page,
+                                            totalPages: resultServer.totalPages)
+            })
     }
 }
 
@@ -45,4 +58,10 @@ struct Movie: Codable {
     let genreIds: [Int]
     let overview: String
     let originalLanguage: String
+
+    func releaseDateAsDate() -> Date {
+        let formatter = DateFormatter.dayFormatter
+
+        return formatter.date(from: releaseDate) ?? Date.minimumDate()
+    }
 }
