@@ -13,11 +13,14 @@ import AlignedCollectionViewFlowLayout
 class MovieCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var coverImageView: UIImageView?
     @IBOutlet weak var titleLabel: UILabel?
+    @IBOutlet weak var genreLabel: UILabel?
+    @IBOutlet weak var releaseDateLabel: UILabel?
     @IBOutlet weak var tokenView: TokensView?
 
     var genres: [String] = [] {
         didSet {
             tokenView?.tokens = genres
+            genreLabel?.isHidden = genres.isEmpty
         }
     }
 
@@ -26,12 +29,14 @@ class MovieCollectionViewCell: UICollectionViewCell {
 
         tokenView?.tokens = []
         titleLabel?.text = nil
+        releaseDateLabel?.text = nil
         coverImageView?.sd_cancelCurrentImageLoad()
         coverImageView?.image = nil
     }
 
     func configure(movie: Movie) {
         titleLabel?.text = movie.title
+        releaseDateLabel?.text = "Release \(movie.releaseDate)"
         genres = Settings.genres?.getTitles(ids: movie.genreIds) ?? []
 
         guard let posterPath = movie.posterPath else { return }

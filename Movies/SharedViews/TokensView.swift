@@ -34,6 +34,7 @@ class TokensView: UICollectionView {
         let alignedFlowLayout = AlignedCollectionViewFlowLayout(horizontalAlignment: .left, verticalAlignment: .center)
 
         alignedFlowLayout.minimumInteritemSpacing = 3
+        alignedFlowLayout.minimumLineSpacing = 3
 
         collectionViewLayout = alignedFlowLayout
     }
