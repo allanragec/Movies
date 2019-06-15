@@ -37,8 +37,8 @@ struct Movie: Codable {
     let title: String
     let voteCount: Int64
     let popularity: Double
-    let posterPath: String
-    let backdropPath: String
+    let posterPath: String?
+    let backdropPath: String?
     let releaseDate: String
     let genreIds: [Int]
     let overview: String

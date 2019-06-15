@@ -18,20 +18,32 @@
                 <rect key="frame" x="0.0" y="0.0" width="103" height="155"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQp-Fg-3Ai">
+                        <rect key="frame" x="36" y="70.5" width="31" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nEl-Vy-pmM">
                         <rect key="frame" x="0.0" y="0.0" width="103" height="155"/>
                     </imageView>
                 </subviews>
             </view>
+            <color key="backgroundColor" red="0.49019607840000001" green="0.47843137250000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="leading" secondItem="nEl-Vy-pmM" secondAttribute="leading" id="1Ly-Zx-fS5"/>
+                <constraint firstItem="sQp-Fg-3Ai" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="3" id="3qE-qu-uun"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sQp-Fg-3Ai" secondAttribute="trailing" constant="3" id="5es-HE-lJv"/>
                 <constraint firstItem="nEl-Vy-pmM" firstAttribute="bottom" secondItem="gTV-IL-0wX" secondAttribute="bottom" id="Kcb-Ux-7hh"/>
                 <constraint firstAttribute="trailing" secondItem="nEl-Vy-pmM" secondAttribute="trailing" id="e9v-zr-D9k"/>
+                <constraint firstItem="sQp-Fg-3Ai" firstAttribute="centerX" secondItem="nEl-Vy-pmM" secondAttribute="centerX" id="gdU-7K-TG6"/>
                 <constraint firstAttribute="top" secondItem="nEl-Vy-pmM" secondAttribute="top" id="l02-IN-1YG"/>
+                <constraint firstItem="sQp-Fg-3Ai" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="sRm-hv-rxj"/>
             </constraints>
             <size key="customSize" width="0.0" height="-14"/>
             <connections>
                 <outlet property="coverImageView" destination="nEl-Vy-pmM" id="TTo-ft-AYJ"/>
+                <outlet property="titleLabel" destination="sQp-Fg-3Ai" id="wB9-Rj-4dZ"/>
             </connections>
             <point key="canvasLocation" x="71.739130434782609" y="130.24553571428572"/>
         </collectionViewCell>
