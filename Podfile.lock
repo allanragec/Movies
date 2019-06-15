@@ -13,7 +13,7 @@ PODS:
   - SDWebImage/Core (5.0.0)
 
 DEPENDENCIES:
-  - AlignedCollectionViewFlowLayout
+  - AlignedCollectionViewFlowLayout (= 1.1.2)
   - KeychainSwift (= 16.0.1)
   - "NSObject+Rx (= 4.4.1)"
   - RxBlocking (= 4.5.0)
@@ -40,6 +40,6 @@ SPEC CHECKSUMS:
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   SDWebImage: 5de80a0302de9e377e62f47d2fa1304efff0e55f
 
-PODFILE CHECKSUM: 9257a39b37373f7dabb0dc76c17249bef7c937d8
+PODFILE CHECKSUM: 6dbf5eea8f6d763b09f969556ead974213fa7795
 
 COCOAPODS: 1.6.0
