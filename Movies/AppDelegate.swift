@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,8 +21,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = MVTabBarController.shared
         window?.makeKeyAndVisible()
 
+        updateGenres()
+
         return true
     }
 
+    private func updateGenres() {
+        let backgroundThread = ConcurrentDispatchQueueScheduler(qos: .background)
+
+        GetGenresInteractor()
+            .execute()
+            .subscribeOn(backgroundThread)
+            .subscribe()
+            .disposed(by: rx.disposeBag)
+    }
 }
 
