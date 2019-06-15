@@ -50,6 +50,8 @@
 		D2DABF5B22B49A6A003DBB32 /* ModularViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DABF5A22B49A6A003DBB32 /* ModularViewController.swift */; };
 		D2DABF5D22B49A87003DBB32 /* ModularViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DABF5C22B49A87003DBB32 /* ModularViewModel.swift */; };
 		D2DABF6022B49AF1003DBB32 /* CellItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DABF5F22B49AF1003DBB32 /* CellItemController.swift */; };
+		D2DABF6222B4A7E7003DBB32 /* GetGenresInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DABF6122B4A7E7003DBB32 /* GetGenresInteractor.swift */; };
+		D2DABF6422B4A914003DBB32 /* GetGenresInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DABF6322B4A914003DBB32 /* GetGenresInteractorTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +116,8 @@
 		D2DABF5A22B49A6A003DBB32 /* ModularViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModularViewController.swift; sourceTree = "<group>"; };
 		D2DABF5C22B49A87003DBB32 /* ModularViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModularViewModel.swift; sourceTree = "<group>"; };
 		D2DABF5F22B49AF1003DBB32 /* CellItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellItemController.swift; sourceTree = "<group>"; };
+		D2DABF6122B4A7E7003DBB32 /* GetGenresInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGenresInteractor.swift; sourceTree = "<group>"; };
+		D2DABF6322B4A914003DBB32 /* GetGenresInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGenresInteractorTest.swift; sourceTree = "<group>"; };
 		E1BB608056EE34C9DD0CFD30 /* Pods-Movies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movies.release.xcconfig"; path = "Target Support Files/Pods-Movies/Pods-Movies.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -230,6 +234,7 @@
 				D2C623D922B34B9A004FA027 /* GetAccountInteractor.swift */,
 				D2C623DB22B34EF5004FA027 /* ValidateWithLoginInteractor.swift */,
 				D2C623E622B35EA4004FA027 /* GetUpcomingMoviesInteractor.swift */,
+				D2DABF6122B4A7E7003DBB32 /* GetGenresInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -268,6 +273,7 @@
 				D2C623E022B352B5004FA027 /* CreateSessionInteractorTest.swift */,
 				D2C623E222B353E4004FA027 /* GetAccountInteractorTest.swift */,
 				D2C623E822B360A5004FA027 /* GetUpcomingMoviesTest.swift */,
+				D2DABF6322B4A914003DBB32 /* GetGenresInteractorTest.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -506,6 +512,7 @@
 				D2C3200C22B2E7FF00263DAB /* AppDelegate.swift in Sources */,
 				D2C623C022B326FE004FA027 /* Codable.swift in Sources */,
 				D2C623C822B327D9004FA027 /* CreateRequestTokenInteractor.swift in Sources */,
+				D2DABF6222B4A7E7003DBB32 /* GetGenresInteractor.swift in Sources */,
 				D2C623EE22B3652C004FA027 /* MovieCollectionViewCell.swift in Sources */,
 				D2C623B422B31AE9004FA027 /* ProfileViewController.swift in Sources */,
 				D2C623BB22B325A0004FA027 /* LoaderDataFromServer.swift in Sources */,
@@ -528,6 +535,7 @@
 				D2C623E322B353E4004FA027 /* GetAccountInteractorTest.swift in Sources */,
 				D2C623DF22B35166004FA027 /* ValidateWithLoginInteractorTest.swift in Sources */,
 				D2C623CE22B32E88004FA027 /* CreateRequestTokenInteractorTest.swift in Sources */,
+				D2DABF6422B4A914003DBB32 /* GetGenresInteractorTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,6 +15,7 @@ class Settings {
     static let EXPIRATION_DATE = "expirationDate"
     static let REQUEST_TOKEN = "requestToken"
     static let USER_ACCOUNT = "userAccount"
+    static let GENRES = "genres"
 
     static let API_KEY = ""
 
@@ -72,6 +73,19 @@ class Settings {
         }
         set {
             preferences.set(newValue.asData(), forKey: USER_ACCOUNT)
+        }
+    }
+
+    class var genres: GenresResult? {
+        get {
+            guard let data = preferences.value(forKey: GENRES) as? Data else {
+                return nil
+            }
+
+            return try? GenresResult(with: data)
+        }
+        set {
+            preferences.set(newValue.asData(), forKey: GENRES)
         }
     }
 
