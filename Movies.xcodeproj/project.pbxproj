@@ -12,6 +12,7 @@
 		D240E08B22B3066F00D498C7 /* MVTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D240E08A22B3066F00D498C7 /* MVTabBarController.swift */; };
 		D240E08E22B3071300D498C7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D240E08C22B3071300D498C7 /* HomeViewController.swift */; };
 		D240E08F22B3071300D498C7 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D240E08D22B3071300D498C7 /* HomeViewController.xib */; };
+		D24373DB22B47E270012C737 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24373DA22B47E270012C737 /* HomeViewModel.swift */; };
 		D2C3200C22B2E7FF00263DAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C3200B22B2E7FF00263DAB /* AppDelegate.swift */; };
 		D2C3201322B2E80100263DAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2C3201222B2E80100263DAB /* Assets.xcassets */; };
 		D2C3201622B2E80100263DAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2C3201422B2E80100263DAB /* LaunchScreen.storyboard */; };
@@ -62,6 +63,7 @@
 		D240E08A22B3066F00D498C7 /* MVTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVTabBarController.swift; sourceTree = "<group>"; };
 		D240E08C22B3071300D498C7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D240E08D22B3071300D498C7 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		D24373DA22B47E270012C737 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		D2C3200822B2E7FF00263DAB /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2C3200B22B2E7FF00263DAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2C3201222B2E80100263DAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -145,6 +147,14 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		D24373D922B47E060012C737 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D24373DA22B47E270012C737 /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		D2C31FFF22B2E7FF00263DAB = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +182,7 @@
 				D2C623BE22B326BF004FA027 /* Extensions */,
 				D2C623B622B3253B004FA027 /* Interactors */,
 				D240E08922B3062900D498C7 /* ViewControllers */,
+				D24373D922B47E060012C737 /* ViewModels */,
 				D2C623B722B32573004FA027 /* Utils */,
 				D2C3200B22B2E7FF00263DAB /* AppDelegate.swift */,
 				D2C3201222B2E80100263DAB /* Assets.xcassets */,
@@ -460,6 +471,7 @@
 				D2C623EE22B3652C004FA027 /* MovieCollectionViewCell.swift in Sources */,
 				D2C623B422B31AE9004FA027 /* ProfileViewController.swift in Sources */,
 				D2C623BB22B325A0004FA027 /* LoaderDataFromServer.swift in Sources */,
+				D24373DB22B47E270012C737 /* HomeViewModel.swift in Sources */,
 				D2C623B922B32584004FA027 /* LoaderObservable.swift in Sources */,
 				D2C623DA22B34B9A004FA027 /* GetAccountInteractor.swift in Sources */,
 				D240E08E22B3071300D498C7 /* HomeViewController.swift in Sources */,

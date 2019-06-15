@@ -6,62 +6,37 @@
 //  Copyright © 2019 Allan Melo. All rights reserved.
 //
 
-import RxSwift
-import NSObject_Rx
+import UIKit
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView?
     @IBOutlet weak var loadingActivityIndicator: UIActivityIndicatorView?
 
-    let cell = "MovieCollectionViewCell"
-
-    var results: [Movie] = []
-    var currentPage = 1
+    lazy var viewModel = {
+        return HomeViewModel(self)
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        collectionView?.register(UINib(nibName: cell, bundle: nil), forCellWithReuseIdentifier: cell)
-
-        let backgroundThread = ConcurrentDispatchQueueScheduler(qos: .background)
-
-        loadingActivityIndicator?.startAnimating()
-        
-        GetUpcomingMoviesInteractor(page: currentPage)
-            .execute()
-            .subscribeOn(backgroundThread)
-            .observeOn(MainScheduler.instance)
-            .subscribe(
-            onNext: { [weak self] result in
-                self?.results += result.results
-                self?.collectionView?.reloadData()
-                self?.currentPage += 1
-            },
-            onError: { error in
-                print(error)
-            },
-            onCompleted: { [weak self] in
-                self?.loadingActivityIndicator?.stopAnimating()
-            })
-            .disposed(by: rx.disposeBag)
+        viewModel.viewDidLoad()
     }
 }
 
 extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return results.count
+        return viewModel.getResultsCount()
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath)
         -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cell, for: indexPath)
-            as? MovieCollectionViewCell,
-            let movie = results.get(at: indexPath.row) else {
-            return UICollectionViewCell()
-        }
 
-        cell.configure(movie: movie)
+        return viewModel.getCell(at: indexPath)
+    }
+}
 
-        return cell
+extension HomeViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        viewModel.willDisplay(at: indexPath)
     }
 }

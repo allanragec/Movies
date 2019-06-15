@@ -30,6 +30,8 @@ extension GetUpcomingMoviesInteractor: LoaderCodableObservable {
 
 struct UpcomingMoviesResult: Codable {
     let results: [Movie]
+    let page: Int
+    let totalPages: Int
 }
 
 struct Movie: Codable {
