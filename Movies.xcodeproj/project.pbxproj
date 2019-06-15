@@ -52,6 +52,9 @@
 		D2DABF6022B49AF1003DBB32 /* CellItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DABF5F22B49AF1003DBB32 /* CellItemController.swift */; };
 		D2DABF6222B4A7E7003DBB32 /* GetGenresInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DABF6122B4A7E7003DBB32 /* GetGenresInteractor.swift */; };
 		D2DABF6422B4A914003DBB32 /* GetGenresInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DABF6322B4A914003DBB32 /* GetGenresInteractorTest.swift */; };
+		D2DABF6722B4B307003DBB32 /* TokenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DABF6522B4B307003DBB32 /* TokenCollectionViewCell.swift */; };
+		D2DABF6822B4B307003DBB32 /* TokenCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2DABF6622B4B307003DBB32 /* TokenCollectionViewCell.xib */; };
+		D2DABF6D22B4C641003DBB32 /* TokensView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DABF6C22B4C641003DBB32 /* TokensView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +121,9 @@
 		D2DABF5F22B49AF1003DBB32 /* CellItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellItemController.swift; sourceTree = "<group>"; };
 		D2DABF6122B4A7E7003DBB32 /* GetGenresInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGenresInteractor.swift; sourceTree = "<group>"; };
 		D2DABF6322B4A914003DBB32 /* GetGenresInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGenresInteractorTest.swift; sourceTree = "<group>"; };
+		D2DABF6522B4B307003DBB32 /* TokenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenCollectionViewCell.swift; sourceTree = "<group>"; };
+		D2DABF6622B4B307003DBB32 /* TokenCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TokenCollectionViewCell.xib; sourceTree = "<group>"; };
+		D2DABF6C22B4C641003DBB32 /* TokensView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensView.swift; sourceTree = "<group>"; };
 		E1BB608056EE34C9DD0CFD30 /* Pods-Movies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movies.release.xcconfig"; path = "Target Support Files/Pods-Movies/Pods-Movies.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -202,6 +208,7 @@
 		D2C3200A22B2E7FF00263DAB /* Movies */ = {
 			isa = PBXGroup;
 			children = (
+				D2DABF6B22B4C619003DBB32 /* SharedViews */,
 				D2C623EB22B36508004FA027 /* SharedCells */,
 				D2C623BE22B326BF004FA027 /* Extensions */,
 				D2C623B622B3253B004FA027 /* Interactors */,
@@ -283,6 +290,8 @@
 			children = (
 				D2C623EC22B3652C004FA027 /* MovieCollectionViewCell.swift */,
 				D2C623ED22B3652C004FA027 /* MovieCollectionViewCell.xib */,
+				D2DABF6522B4B307003DBB32 /* TokenCollectionViewCell.swift */,
+				D2DABF6622B4B307003DBB32 /* TokenCollectionViewCell.xib */,
 			);
 			path = SharedCells;
 			sourceTree = "<group>";
@@ -294,6 +303,14 @@
 				D2DABF5F22B49AF1003DBB32 /* CellItemController.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D2DABF6B22B4C619003DBB32 /* SharedViews */ = {
+			isa = PBXGroup;
+			children = (
+				D2DABF6C22B4C641003DBB32 /* TokensView.swift */,
+			);
+			path = SharedViews;
 			sourceTree = "<group>";
 		};
 		E50C11DF6137BE39DB87F5ED /* Frameworks */ = {
@@ -395,6 +412,7 @@
 				D2C3201622B2E80100263DAB /* LaunchScreen.storyboard in Resources */,
 				D2C3201322B2E80100263DAB /* Assets.xcassets in Resources */,
 				D2C623B522B31AE9004FA027 /* ProfileViewController.xib in Resources */,
+				D2DABF6822B4B307003DBB32 /* TokenCollectionViewCell.xib in Resources */,
 				D2DABF5322B48449003DBB32 /* MovieDetailsViewController.xib in Resources */,
 				D240E08F22B3071300D498C7 /* HomeViewController.xib in Resources */,
 				D2C623EF22B3652C004FA027 /* MovieCollectionViewCell.xib in Resources */,
@@ -502,6 +520,7 @@
 				D2DABF5D22B49A87003DBB32 /* ModularViewModel.swift in Sources */,
 				D2DABF5B22B49A6A003DBB32 /* ModularViewController.swift in Sources */,
 				D2C623DD22B35080004FA027 /* ValidateWithLoginInteractor.swift in Sources */,
+				D2DABF6D22B4C641003DBB32 /* TokensView.swift in Sources */,
 				D2C623C622B327BE004FA027 /* Observable.swift in Sources */,
 				D2C623E722B35EA4004FA027 /* GetUpcomingMoviesInteractor.swift in Sources */,
 				D2DABF5522B490CD003DBB32 /* UIViewController.swift in Sources */,
@@ -516,6 +535,7 @@
 				D2C623C822B327D9004FA027 /* CreateRequestTokenInteractor.swift in Sources */,
 				D2DABF6222B4A7E7003DBB32 /* GetGenresInteractor.swift in Sources */,
 				D2C623EE22B3652C004FA027 /* MovieCollectionViewCell.swift in Sources */,
+				D2DABF6722B4B307003DBB32 /* TokenCollectionViewCell.swift in Sources */,
 				D2C623B422B31AE9004FA027 /* ProfileViewController.swift in Sources */,
 				D2C623BB22B325A0004FA027 /* LoaderDataFromServer.swift in Sources */,
 				D2DABF5222B48449003DBB32 /* MovieDetailsViewController.swift in Sources */,

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gTV-IL-0wX" customClass="TokenCollectionViewCell" customModule="Movies" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="59" height="20"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="59" height="20"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WoR-XR-AgO" userLabel="ContainerView">
+                        <rect key="frame" x="0.0" y="0.0" width="59" height="20"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sK-xr-Rh9">
+                                <rect key="frame" x="14.5" y="3.5" width="30" height="13.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="0.28456763698630139" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7sK-xr-Rh9" firstAttribute="centerY" secondItem="WoR-XR-AgO" secondAttribute="centerY" id="QjU-cP-WZ3"/>
+                            <constraint firstItem="7sK-xr-Rh9" firstAttribute="centerX" secondItem="WoR-XR-AgO" secondAttribute="centerX" id="iNu-3k-1L6"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                <integer key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="WoR-XR-AgO" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="8Lw-iF-e51"/>
+                <constraint firstItem="WoR-XR-AgO" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Eho-ak-QIm"/>
+                <constraint firstAttribute="bottom" secondItem="WoR-XR-AgO" secondAttribute="bottom" id="PQO-dg-NDJ"/>
+                <constraint firstAttribute="trailing" secondItem="WoR-XR-AgO" secondAttribute="trailing" id="sa9-Ou-Puj"/>
+            </constraints>
+            <size key="customSize" width="59" height="20"/>
+            <connections>
+                <outlet property="containerView" destination="WoR-XR-AgO" id="sMB-5W-X5c"/>
+                <outlet property="titleLabel" destination="7sK-xr-Rh9" id="8vn-fr-Fjb"/>
+            </connections>
+            <point key="canvasLocation" x="142.75362318840581" y="136.60714285714286"/>
+        </collectionViewCell>
+    </objects>
+</document>
