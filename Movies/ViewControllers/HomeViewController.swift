@@ -21,8 +21,6 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Upcoming"
-
         collectionView?.register(UINib(nibName: cell, bundle: nil), forCellWithReuseIdentifier: cell)
 
         let backgroundThread = ConcurrentDispatchQueueScheduler(qos: .background)

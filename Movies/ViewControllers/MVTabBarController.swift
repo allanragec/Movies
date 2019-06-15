@@ -35,19 +35,20 @@ class MVTabBarController: UITabBarController, UITabBarControllerDelegate {
     func createTabs() {
         tabBar.isHidden = false
 
-        let homeNavigationController = createNavigationController(HomeViewController(), icon: "home")
+        let homeNavigationController = createNavigationController(HomeViewController(), title: "Upcoming", icon: "home")
 
-        let profileNavigationController = createNavigationController(ProfileViewController(), icon: "profile")
+        let profileNavigationController = createNavigationController(ProfileViewController(), title: "Profile", icon: "profile")
 
         setViewControllers([homeNavigationController,
                             profileNavigationController], animated: false)
     }
 
-    private func createNavigationController(_ viewController: UIViewController, icon: String)
+    private func createNavigationController(_ viewController: UIViewController, title: String, icon: String)
         -> UINavigationController {
 
         let icon = UIImage(named: icon)
 
+        viewController.title = title
         viewController.tabBarItem.selectedImage = icon
         viewController.tabBarItem.image = icon
         viewController.tabBarItem.imageInsets = UIEdgeInsets(top: 5, left: 0, bottom: -5, right: 0)
