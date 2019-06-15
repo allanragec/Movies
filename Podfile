@@ -13,6 +13,7 @@ target 'Movies' do
   pod 'NSObject+Rx', '4.4.1'
   pod 'SDWebImage', '5.0.0'
   pod 'KeychainSwift', '16.0.1'
+  pod 'AlignedCollectionViewFlowLayout', '1.1.2'
 
   target 'MoviesTests' do
     inherit! :search_paths

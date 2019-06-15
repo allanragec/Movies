@@ -1,4 +1,5 @@
 PODS:
+  - AlignedCollectionViewFlowLayout (1.1.2)
   - KeychainSwift (16.0.1)
   - "NSObject+Rx (4.4.1)":
     - RxSwift (~> 4.3)
@@ -12,6 +13,7 @@ PODS:
   - SDWebImage/Core (5.0.0)
 
 DEPENDENCIES:
+  - AlignedCollectionViewFlowLayout
   - KeychainSwift (= 16.0.1)
   - "NSObject+Rx (= 4.4.1)"
   - RxBlocking (= 4.5.0)
@@ -21,6 +23,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - AlignedCollectionViewFlowLayout
     - KeychainSwift
     - "NSObject+Rx"
     - RxBlocking
@@ -29,6 +32,7 @@ SPEC REPOS:
     - SDWebImage
 
 SPEC CHECKSUMS:
+  AlignedCollectionViewFlowLayout: ee2ef451e741ec08f8e0967d828001e2f051c20a
   KeychainSwift: 4209611373ca4a098e09b1e547eebd87c544dcc4
   "NSObject+Rx": 9884a92f19b610795c431e10b4e601913b59c9e9
   RxBlocking: 79413e4d916f44bb3e113c5b2cc059e36fe58910
@@ -36,6 +40,6 @@ SPEC CHECKSUMS:
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   SDWebImage: 5de80a0302de9e377e62f47d2fa1304efff0e55f
 
-PODFILE CHECKSUM: b1af65caf2c885ba22c6d2a19377064bd03dc7ca
+PODFILE CHECKSUM: 9257a39b37373f7dabb0dc76c17249bef7c937d8
 
 COCOAPODS: 1.6.0
