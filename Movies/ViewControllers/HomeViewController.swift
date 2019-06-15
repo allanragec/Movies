@@ -47,13 +47,6 @@ extension HomeViewController: UICollectionViewDelegate {
 
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let margins: CGFloat = isLandscape ? 40 : 30
-
-        let numberOfColumns: CGFloat = isLandscape ? 3 : 2
-
-        let width = (collectionView.frame.width - margins) / numberOfColumns
-        let height = (width / 20) * 30
-
-        return CGSize(width: width, height: height)
+        return viewModel.sizeForItem(at: indexPath)
     }
 }

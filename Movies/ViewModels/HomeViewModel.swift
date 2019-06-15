@@ -88,6 +88,26 @@ class HomeViewModel {
         viewController?.navigationController?.pushViewController(movieDetailsViewController, animated: true)
     }
 
+    // MARK: - UICollectionViewDelegateFlowLayout
+
+    func sizeForItem(at indexPath: IndexPath) -> CGSize {
+        guard let viewController = viewController,
+            let collectionView = viewController.collectionView else {
+                return CGSize.zero
+        }
+
+        let isLandscape = viewController.isLandscape
+
+        let margins: CGFloat = isLandscape ? 40 : 30
+
+        let numberOfColumns: CGFloat = isLandscape ? 3 : 2
+
+        let width = (collectionView.frame.width - margins) / numberOfColumns
+        let height = (width / 20) * 30
+
+        return CGSize(width: width, height: height)
+    }
+
     // MARK: - URL tasks
 
     private func loadMovies() {
