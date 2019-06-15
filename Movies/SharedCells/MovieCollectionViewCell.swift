@@ -8,14 +8,23 @@
 
 import UIKit
 import SDWebImage
+import AlignedCollectionViewFlowLayout
 
 class MovieCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var coverImageView: UIImageView?
     @IBOutlet weak var titleLabel: UILabel?
+    @IBOutlet weak var tokenView: TokensView?
+
+    var genres: [String] = [] {
+        didSet {
+            tokenView?.tokens = genres
+        }
+    }
 
     override func prepareForReuse() {
         super.prepareForReuse()
 
+        tokenView?.tokens = []
         titleLabel?.text = nil
         coverImageView?.sd_cancelCurrentImageLoad()
         coverImageView?.image = nil
@@ -23,6 +32,7 @@ class MovieCollectionViewCell: UICollectionViewCell {
 
     func configure(movie: Movie) {
         titleLabel?.text = movie.title
+        genres = Settings.genres?.getTitles(ids: movie.genreIds) ?? []
 
         guard let posterPath = movie.posterPath else { return }
 

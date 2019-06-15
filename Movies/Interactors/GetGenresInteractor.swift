@@ -29,4 +29,10 @@ struct GenresResult: Codable {
         let id: Int
         let name: String
     }
+
+    func getTitles(ids: [Int]) -> [String] {
+        return genres
+            .filter({ ids.contains($0.id) })
+            .map({ $0.name })
+    }
 }
