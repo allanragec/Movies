@@ -11,6 +11,7 @@ PODS:
   - SDWebImage (5.0.0):
     - SDWebImage/Core (= 5.0.0)
   - SDWebImage/Core (5.0.0)
+  - UICircularProgressRing (6.2.0)
 
 DEPENDENCIES:
   - AlignedCollectionViewFlowLayout (= 1.1.2)
@@ -20,6 +21,7 @@ DEPENDENCIES:
   - RxCocoa (= 4.5.0)
   - RxSwift (= 4.5.0)
   - SDWebImage (= 5.0.0)
+  - UICircularProgressRing
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -30,6 +32,7 @@ SPEC REPOS:
     - RxCocoa
     - RxSwift
     - SDWebImage
+    - UICircularProgressRing
 
 SPEC CHECKSUMS:
   AlignedCollectionViewFlowLayout: ee2ef451e741ec08f8e0967d828001e2f051c20a
@@ -39,7 +42,8 @@ SPEC CHECKSUMS:
   RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   SDWebImage: 5de80a0302de9e377e62f47d2fa1304efff0e55f
+  UICircularProgressRing: 0ff679b05a17f15ad6301a7886686837b8c301a9
 
-PODFILE CHECKSUM: 6dbf5eea8f6d763b09f969556ead974213fa7795
+PODFILE CHECKSUM: 901825a4355a98adf1dfd8a257b746bb62cc59cb
 
 COCOAPODS: 1.6.0

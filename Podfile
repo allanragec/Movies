@@ -14,6 +14,7 @@ target 'Movies' do
   pod 'SDWebImage', '5.0.0'
   pod 'KeychainSwift', '16.0.1'
   pod 'AlignedCollectionViewFlowLayout', '1.1.2'
+  pod 'UICircularProgressRing', '6.2.0'
 
   target 'MoviesTests' do
     inherit! :search_paths
