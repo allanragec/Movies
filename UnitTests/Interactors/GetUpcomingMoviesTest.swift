@@ -18,6 +18,7 @@ class GetUpcomingMoviesTest: XCTestCase {
 
         XCTAssertNotNil(result)
         XCTAssertFalse(result!.results.isEmpty)
+        XCTAssertEqual(result!.page, 1)
     }
 
     func testGetUpcomingMoviesInteractorPage2() {
@@ -26,6 +27,7 @@ class GetUpcomingMoviesTest: XCTestCase {
 
         XCTAssertNotNil(result)
         XCTAssertFalse(result!.results.isEmpty)
+        XCTAssertEqual(result!.page, 2)
     }
 }
 
