@@ -34,24 +34,14 @@ class SearchViewModel {
     }
 
     func searchSubscribe() {
-        guard let viewController = viewController else { return }
+        guard let viewController = viewController,
+            let searchObservable = viewController.searchBar?.rx.text.asObservable()
+            else { return }
 
         let backgroundThread = ConcurrentDispatchQueueScheduler(qos: .background)
 
-        viewController.searchBar?.rx.text
-            .asObservable()
-            .skip(1)
-            .debounce(0.4, scheduler: MainScheduler.instance)
-            .map { $0 ?? "" }
-            .distinctUntilChanged { textBefore, textAfter in
-                let textBeforeTrimmed = textBefore.trimmingCharacters(
-                    in: CharacterSet.whitespacesAndNewlines)
-
-                let textAfterTrimmed = textAfter.trimmingCharacters(
-                    in: CharacterSet.whitespacesAndNewlines)
-
-                return textBeforeTrimmed == textAfterTrimmed
-            }
+        SearchObservable
+            .configure(searchObservable)
             .filter{ query in
                 if query.count > 2 {
                     return true
