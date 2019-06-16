@@ -16,7 +16,7 @@ class MovieDetailsViewModel {
 
     weak var viewController: MovieDetailsViewController?
 
-    var similars: [MovieCellItem] = [] {
+    var similars: [Movie] = [] {
         didSet {
             viewController?.tableView?.reloadData()
         }
@@ -41,7 +41,7 @@ class MovieDetailsViewModel {
 
         GetSimilarMoviesInteractor(movieId: movie.id)
             .execute()
-            .map { result in result.results.map { MovieCellItem(movie: $0) } }
+            .map { result in result.results }
             .subscribeOn(backgroundThread)
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { movies in
@@ -118,11 +118,8 @@ extension MovieDetailsViewModel: ModularViewModel {
             items.append(DescriptionCellItem(description: movie.overview))
         }
 
-        if !similars.isEmpty {
-            items.append(SectionTitleCellItem(title: "Similars"))
-            items = items + similars
-        }
-        
+        items = items + SimilarModuleController(movies: similars).cellItems()
+
         return items
     }
 }
