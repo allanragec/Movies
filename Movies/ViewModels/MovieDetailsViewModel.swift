@@ -9,10 +9,18 @@
 import UIKit
 import SDWebImage
 import UICircularProgressRing
+import RxSwift
+import NSObject_Rx
 
 class MovieDetailsViewModel {
 
     weak var viewController: MovieDetailsViewController?
+
+    var similars: [MovieCellItem] = [] {
+        didSet {
+            viewController?.tableView?.reloadData()
+        }
+    }
 
     // MARK: - LifeCycle
 
@@ -22,6 +30,26 @@ class MovieDetailsViewModel {
 
     func viewDidLoad() {
         setupHeaderView()
+        similarSubscribe()
+    }
+
+    private func similarSubscribe() {
+        guard let viewController = viewController else { return }
+        let movie = viewController.movie
+
+         let backgroundThread = ConcurrentDispatchQueueScheduler(qos: .background)
+
+        GetSimilarMoviesInteractor(movieId: movie.id)
+            .execute()
+            .map { result in result.results.map { MovieCellItem(movie: $0) } }
+            .subscribeOn(backgroundThread)
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { movies in
+                self.similars = movies
+            }, onError: { error in
+                self.verifyError(error)
+            })
+            .disposed(by: viewController.rx.disposeBag)
     }
 
     private func setupHeaderView() {
@@ -60,6 +88,10 @@ class MovieDetailsViewModel {
     private func showPosterImageView(_ show: Bool) {
         viewController?.posterWidthConstraint?.constant = show ? 110 : 0
     }
+
+    private func verifyError(_ error: Error) {
+        print("error \(error)")
+    }
 }
 
 extension MovieDetailsViewModel: ModularViewModel {
@@ -69,6 +101,8 @@ extension MovieDetailsViewModel: ModularViewModel {
 
     func registerCellItems() {
         getTableView()?.register(cellController: DescriptionCellItem.self)
+        getTableView()?.register(cellController: SectionTitleCellItem.self)
+        getTableView()?.register(cellController: MovieCellItem.self)
     }
 
     func getTableView() -> UITableView? {
@@ -78,11 +112,18 @@ extension MovieDetailsViewModel: ModularViewModel {
     func getItems() -> [CellItemController] {
         guard let movie = viewController?.movie else { return [] }
 
+        var items = [CellItemController]()
+
         if !movie.overview.isEmpty {
-            return [DescriptionCellItem(description: movie.overview)]
+            items.append(DescriptionCellItem(description: movie.overview))
+        }
+
+        if !similars.isEmpty {
+            items.append(SectionTitleCellItem(title: "Similars"))
+            items = items + similars
         }
         
-        return []
+        return items
     }
 }
 
