@@ -16,6 +16,8 @@ protocol ModularViewModel {
     func getItems() -> [CellItemController]
     func createCell(for index: IndexPath) -> UITableViewCell
     func open(for index: IndexPath)
+    func isCollapsibleHeaderView() -> Bool
+    func getAsCollapsibleHeaderView() -> CollapsibleHeaderView?
 }
 
 extension ModularViewModel {
@@ -36,5 +38,33 @@ extension ModularViewModel {
 
         return item.cell(tableView: tableView, indexPath: index)
     }
+
+    func isCollapsibleHeaderView() -> Bool {
+        return self is CollapsibleHeaderView
+    }
+
+    func getAsCollapsibleHeaderView() -> CollapsibleHeaderView? {
+        return self as? CollapsibleHeaderView
+    }
 }
 
+//MARK: Collapsible Header View
+
+protocol CollapsibleHeaderView {
+    func getHeaderView() -> UIView?
+    func getHeaderHeightConstraint() -> NSLayoutConstraint?
+    func getMaximumHeaderSize() -> CGFloat
+    func getPinnedHeaderSize() -> CGFloat
+    func getScrollableHeaderSize() -> CGFloat
+    func getHalfHeaderSize() -> CGFloat
+}
+
+extension CollapsibleHeaderView {
+    func getScrollableHeaderSize() -> CGFloat {
+        return getMaximumHeaderSize() - getPinnedHeaderSize()
+    }
+
+    func getHalfHeaderSize() -> CGFloat {
+        return getMaximumHeaderSize() / 2
+    }
+}
