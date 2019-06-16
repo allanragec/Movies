@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,18 +20,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="azC-w1-x8F" userLabel="divider">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="1" id="iFN-3o-7mC"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="i97-v1-v1Z"/>
-                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="300" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mh-Re-bGq">
                         <rect key="frame" x="141.5" y="11" width="37.5" height="21.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xBe-C3-3tA" userLabel="divider">
@@ -42,25 +35,29 @@
                         <viewLayoutGuide key="safeArea" id="aov-CG-iOn"/>
                     </view>
                 </subviews>
+                <color key="backgroundColor" name="primaryColor"/>
                 <constraints>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4mh-Re-bGq" secondAttribute="trailing" constant="20" id="0X8-hk-Dkd"/>
                     <constraint firstAttribute="bottom" secondItem="xBe-C3-3tA" secondAttribute="bottom" id="2Fs-1P-IE0"/>
-                    <constraint firstItem="azC-w1-x8F" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="AM9-VO-onw"/>
                     <constraint firstItem="4mh-Re-bGq" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="CRP-cS-EkT"/>
                     <constraint firstItem="4mh-Re-bGq" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="KR9-fh-c6o"/>
                     <constraint firstItem="4mh-Re-bGq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="O0B-EP-NjH"/>
                     <constraint firstItem="4mh-Re-bGq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="VkB-8r-LI1"/>
                     <constraint firstAttribute="trailing" secondItem="xBe-C3-3tA" secondAttribute="trailing" id="pOa-WX-CkX"/>
                     <constraint firstAttribute="bottom" secondItem="4mh-Re-bGq" secondAttribute="bottom" constant="11" id="s4r-21-gfP"/>
-                    <constraint firstItem="azC-w1-x8F" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="spt-0V-oY0"/>
-                    <constraint firstAttribute="trailing" secondItem="azC-w1-x8F" secondAttribute="trailing" id="tMF-Vt-NvN"/>
                     <constraint firstItem="xBe-C3-3tA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="vxq-BY-c6I"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" name="primaryColor"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="descriptionLabel" destination="4mh-Re-bGq" id="LAP-uJ-bLI"/>
             </connections>
         </tableViewCell>
     </objects>
+    <resources>
+        <namedColor name="primaryColor">
+            <color red="0.050980392156862744" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
 </document>
