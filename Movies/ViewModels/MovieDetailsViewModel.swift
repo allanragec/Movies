@@ -137,7 +137,7 @@ extension MovieDetailsViewModel: CollapsibleHeaderView {
         let movie = viewController?.movie
         let dontHaveImages = movie?.posterPath == nil && movie?.backdropPath == nil
 
-        return dontHaveImages ? getPinnedHeaderSize() : 240
+        return dontHaveImages ? getPinnedHeaderSize() : 270
     }
 
     func getPinnedHeaderSize() -> CGFloat {
