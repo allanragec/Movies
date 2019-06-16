@@ -17,6 +17,7 @@
 		D2903F8E22B608FA00F07E04 /* DescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903F8C22B608FA00F07E04 /* DescriptionTableViewCell.swift */; };
 		D2903F8F22B608FA00F07E04 /* DescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2903F8D22B608FA00F07E04 /* DescriptionTableViewCell.xib */; };
 		D2903F9122B60A8900F07E04 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903F9022B60A8900F07E04 /* UITableView.swift */; };
+		D2903F9322B6B08000F07E04 /* VoteAverageFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903F9222B6B08000F07E04 /* VoteAverageFormatter.swift */; };
 		D2C3200C22B2E7FF00263DAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C3200B22B2E7FF00263DAB /* AppDelegate.swift */; };
 		D2C3201322B2E80100263DAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2C3201222B2E80100263DAB /* Assets.xcassets */; };
 		D2C3201622B2E80100263DAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2C3201422B2E80100263DAB /* LaunchScreen.storyboard */; };
@@ -85,6 +86,7 @@
 		D2903F8C22B608FA00F07E04 /* DescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		D2903F8D22B608FA00F07E04 /* DescriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionTableViewCell.xib; sourceTree = "<group>"; };
 		D2903F9022B60A8900F07E04 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		D2903F9222B6B08000F07E04 /* VoteAverageFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteAverageFormatter.swift; sourceTree = "<group>"; };
 		D2C3200822B2E7FF00263DAB /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2C3200B22B2E7FF00263DAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2C3201222B2E80100263DAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 				D2C623BC22B325C3004FA027 /* Errors.swift */,
 				D2C623CA22B32CB4004FA027 /* Settings.swift */,
 				D2DABF5A22B49A6A003DBB32 /* ModularViewController.swift */,
+				D2903F9222B6B08000F07E04 /* VoteAverageFormatter.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -558,6 +561,7 @@
 				D2C623BB22B325A0004FA027 /* LoaderDataFromServer.swift in Sources */,
 				D2DABF5222B48449003DBB32 /* MovieDetailsViewController.swift in Sources */,
 				D24373DB22B47E270012C737 /* HomeViewModel.swift in Sources */,
+				D2903F9322B6B08000F07E04 /* VoteAverageFormatter.swift in Sources */,
 				D2C623B922B32584004FA027 /* LoaderObservable.swift in Sources */,
 				D2C623DA22B34B9A004FA027 /* GetAccountInteractor.swift in Sources */,
 				D240E08E22B3071300D498C7 /* HomeViewController.swift in Sources */,

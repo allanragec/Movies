@@ -8,6 +8,7 @@
 
 import UIKit
 import SDWebImage
+import UICircularProgressRing
 
 class MovieDetailsViewModel {
 
@@ -29,6 +30,12 @@ class MovieDetailsViewModel {
 
         viewController.movieTitleLabel?.text = movie.title
         viewController.releaseDateLabel?.text = "Release \(movie.releaseDate)"
+
+        let userScoreCircular = viewController.userScoreCircularProgress
+        userScoreCircular?.valueFormatter = VoteAverageFormatter()
+        userScoreCircular?.style = .ontop
+        userScoreCircular?.font = UIFont.boldSystemFont(ofSize: 12)
+        userScoreCircular?.value = CGFloat(movie.voteAverage)
 
         let genres = Settings.genres?.getTitles(ids: movie.genreIds) ?? []
         viewController.tokenView?.tokens = genres

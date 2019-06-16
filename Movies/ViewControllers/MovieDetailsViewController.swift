@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UICircularProgressRing
 
 class MovieDetailsViewController: ModularViewController<MovieDetailsViewModel> {
 
@@ -19,6 +20,7 @@ class MovieDetailsViewController: ModularViewController<MovieDetailsViewModel> {
     @IBOutlet weak var tokenView: TokensView?
     @IBOutlet weak var releaseDateLabel: UILabel?
     @IBOutlet weak var posterWidthConstraint: NSLayoutConstraint?
+    @IBOutlet weak var userScoreCircularProgress: UICircularProgressRing?
 
     let movie: Movie
 
