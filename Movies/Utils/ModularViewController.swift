@@ -31,6 +31,7 @@ class ModularViewController<T : ModularViewModel> : UIViewController, UITableVie
         }
 
         getViewModel().viewDidLoad()
+        getViewModel().registerCellItems()
     }
 
     @objc func refresh() {
