@@ -14,6 +14,8 @@
 		D240E08F22B3071300D498C7 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D240E08D22B3071300D498C7 /* HomeViewController.xib */; };
 		D24373DB22B47E270012C737 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24373DA22B47E270012C737 /* HomeViewModel.swift */; };
 		D28DB34822B53EDA00D0B380 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28DB34722B53EDA00D0B380 /* Date.swift */; };
+		D2903F8E22B608FA00F07E04 /* DescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903F8C22B608FA00F07E04 /* DescriptionTableViewCell.swift */; };
+		D2903F8F22B608FA00F07E04 /* DescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2903F8D22B608FA00F07E04 /* DescriptionTableViewCell.xib */; };
 		D2903F9122B60A8900F07E04 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903F9022B60A8900F07E04 /* UITableView.swift */; };
 		D2C3200C22B2E7FF00263DAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C3200B22B2E7FF00263DAB /* AppDelegate.swift */; };
 		D2C3201322B2E80100263DAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2C3201222B2E80100263DAB /* Assets.xcassets */; };
@@ -80,6 +82,8 @@
 		D240E08D22B3071300D498C7 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		D24373DA22B47E270012C737 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		D28DB34722B53EDA00D0B380 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		D2903F8C22B608FA00F07E04 /* DescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTableViewCell.swift; sourceTree = "<group>"; };
+		D2903F8D22B608FA00F07E04 /* DescriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionTableViewCell.xib; sourceTree = "<group>"; };
 		D2903F9022B60A8900F07E04 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		D2C3200822B2E7FF00263DAB /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2C3200B22B2E7FF00263DAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -298,6 +302,8 @@
 				D2C623ED22B3652C004FA027 /* MovieCollectionViewCell.xib */,
 				D2DABF6522B4B307003DBB32 /* TokenCollectionViewCell.swift */,
 				D2DABF6622B4B307003DBB32 /* TokenCollectionViewCell.xib */,
+				D2903F8C22B608FA00F07E04 /* DescriptionTableViewCell.swift */,
+				D2903F8D22B608FA00F07E04 /* DescriptionTableViewCell.xib */,
 			);
 			path = SharedCells;
 			sourceTree = "<group>";
@@ -416,6 +422,7 @@
 			files = (
 				D2C623D222B33ACC004FA027 /* LoginViewController.xib in Resources */,
 				D2C3201622B2E80100263DAB /* LaunchScreen.storyboard in Resources */,
+				D2903F8F22B608FA00F07E04 /* DescriptionTableViewCell.xib in Resources */,
 				D2C3201322B2E80100263DAB /* Assets.xcassets in Resources */,
 				D2C623B522B31AE9004FA027 /* ProfileViewController.xib in Resources */,
 				D2DABF6822B4B307003DBB32 /* TokenCollectionViewCell.xib in Resources */,
@@ -534,6 +541,7 @@
 				D2903F9122B60A8900F07E04 /* UITableView.swift in Sources */,
 				D2C623C222B32729004FA027 /* DateFormatter.swift in Sources */,
 				D2DABF5922B4952E003DBB32 /* UIResponder.swift in Sources */,
+				D2903F8E22B608FA00F07E04 /* DescriptionTableViewCell.swift in Sources */,
 				D2DABF5722B49491003DBB32 /* MovieDetailsViewModel.swift in Sources */,
 				D2C623CB22B32CB4004FA027 /* Settings.swift in Sources */,
 				D2C623C422B32743004FA027 /* Dictionary.swift in Sources */,
