@@ -35,12 +35,22 @@ class MVTabBarController: UITabBarController, UITabBarControllerDelegate {
     func createTabs() {
         tabBar.isHidden = false
 
-        let homeNavigationController = createNavigationController(HomeViewController(), title: "Upcoming", icon: "movies")
+        let homeNavigationController = createNavigationController(HomeViewController(),
+                                                                  title: "Upcoming",
+                                                                  icon: "movies")
 
-        let profileNavigationController = createNavigationController(ProfileViewController(), title: "Profile", icon: "profile")
+        let searchNavigationController = createNavigationController(SearchViewController(),
+                                                                    title: "Search",
+                                                                    icon: "search")
+
+        let profileNavigationController = createNavigationController(ProfileViewController(),
+                                                                     title: "Profile",
+                                                                     icon: "profile")
 
         setViewControllers([homeNavigationController,
-                            profileNavigationController], animated: false)
+                            searchNavigationController,
+                            profileNavigationController],
+                           animated: false)
     }
 
     private func createNavigationController(_ viewController: UIViewController, title: String, icon: String)
