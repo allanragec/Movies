@@ -19,5 +19,3 @@ class SearchMoviesInteractorTest: XCTestCase {
         XCTAssertFalse(result!.results.isEmpty)
     }
 }
-
-
