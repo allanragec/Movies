@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="Movies" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicator" destination="fPW-0o-ASr" id="PFZ-w5-VEY"/>
+                <outlet property="searchBar" destination="HZR-gL-OeJ" id="2Rh-L3-CcM"/>
+                <outlet property="tableView" destination="b37-UA-UaX" id="tGi-bc-qwb"/>
+                <outlet property="view" destination="yFs-7r-l9J" id="xs3-3U-o0c"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="yFs-7r-l9J">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="HZR-gL-OeJ">
+                    <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b37-UA-UaX">
+                    <rect key="frame" x="0.0" y="100" width="414" height="762"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="fPW-0o-ASr">
+                    <rect key="frame" x="197" y="471" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="HZR-gL-OeJ" firstAttribute="top" secondItem="bUx-gc-4dM" secondAttribute="top" id="4yC-7L-eer"/>
+                <constraint firstItem="b37-UA-UaX" firstAttribute="top" secondItem="HZR-gL-OeJ" secondAttribute="bottom" id="539-3T-n7z"/>
+                <constraint firstItem="bUx-gc-4dM" firstAttribute="trailing" secondItem="b37-UA-UaX" secondAttribute="trailing" id="Ef4-Df-uti"/>
+                <constraint firstItem="fPW-0o-ASr" firstAttribute="centerY" secondItem="b37-UA-UaX" secondAttribute="centerY" id="HUQ-4M-y6q"/>
+                <constraint firstItem="HZR-gL-OeJ" firstAttribute="leading" secondItem="bUx-gc-4dM" secondAttribute="leading" id="Kjb-Xm-x6G"/>
+                <constraint firstItem="bUx-gc-4dM" firstAttribute="trailing" secondItem="HZR-gL-OeJ" secondAttribute="trailing" id="R3l-Cb-3Qo"/>
+                <constraint firstItem="fPW-0o-ASr" firstAttribute="centerX" secondItem="b37-UA-UaX" secondAttribute="centerX" id="S4R-zC-RWV"/>
+                <constraint firstItem="bUx-gc-4dM" firstAttribute="bottom" secondItem="b37-UA-UaX" secondAttribute="bottom" id="cdJ-jK-0SW"/>
+                <constraint firstItem="b37-UA-UaX" firstAttribute="leading" secondItem="bUx-gc-4dM" secondAttribute="leading" id="f9n-ki-mY2"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="bUx-gc-4dM"/>
+            <point key="canvasLocation" x="55.200000000000003" y="48.125937031484263"/>
+        </view>
+    </objects>
+</document>

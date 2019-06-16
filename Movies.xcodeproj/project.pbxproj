@@ -18,6 +18,9 @@
 		D2903F8F22B608FA00F07E04 /* DescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2903F8D22B608FA00F07E04 /* DescriptionTableViewCell.xib */; };
 		D2903F9122B60A8900F07E04 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903F9022B60A8900F07E04 /* UITableView.swift */; };
 		D2903F9322B6B08000F07E04 /* VoteAverageFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903F9222B6B08000F07E04 /* VoteAverageFormatter.swift */; };
+		D2903F9622B6B1C500F07E04 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903F9422B6B1C500F07E04 /* SearchViewController.swift */; };
+		D2903F9722B6B1C500F07E04 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2903F9522B6B1C500F07E04 /* SearchViewController.xib */; };
+		D2903F9922B6B27800F07E04 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903F9822B6B27800F07E04 /* SearchViewModel.swift */; };
 		D2903F9C22B6B49E00F07E04 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903F9B22B6B49E00F07E04 /* Movie.swift */; };
 		D2903F9E22B6B4D800F07E04 /* SearchMoviesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903F9D22B6B4D800F07E04 /* SearchMoviesInteractor.swift */; };
 		D2903FA022B6B67C00F07E04 /* SearchMoviesInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903F9F22B6B67C00F07E04 /* SearchMoviesInteractorTest.swift */; };
@@ -92,6 +95,9 @@
 		D2903F8D22B608FA00F07E04 /* DescriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionTableViewCell.xib; sourceTree = "<group>"; };
 		D2903F9022B60A8900F07E04 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		D2903F9222B6B08000F07E04 /* VoteAverageFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteAverageFormatter.swift; sourceTree = "<group>"; };
+		D2903F9422B6B1C500F07E04 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		D2903F9522B6B1C500F07E04 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		D2903F9822B6B27800F07E04 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		D2903F9B22B6B49E00F07E04 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		D2903F9D22B6B4D800F07E04 /* SearchMoviesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMoviesInteractor.swift; sourceTree = "<group>"; };
 		D2903F9F22B6B67C00F07E04 /* SearchMoviesInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMoviesInteractorTest.swift; sourceTree = "<group>"; };
@@ -191,6 +197,8 @@
 				D2C623D022B33ACC004FA027 /* LoginViewController.xib */,
 				D2DABF5022B48449003DBB32 /* MovieDetailsViewController.swift */,
 				D2DABF5122B48449003DBB32 /* MovieDetailsViewController.xib */,
+				D2903F9422B6B1C500F07E04 /* SearchViewController.swift */,
+				D2903F9522B6B1C500F07E04 /* SearchViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -201,6 +209,7 @@
 				D24373DA22B47E270012C737 /* HomeViewModel.swift */,
 				D2DABF5622B49491003DBB32 /* MovieDetailsViewModel.swift */,
 				D2DABF5C22B49A87003DBB32 /* ModularViewModel.swift */,
+				D2903F9822B6B27800F07E04 /* SearchViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -455,6 +464,7 @@
 				D2DABF6822B4B307003DBB32 /* TokenCollectionViewCell.xib in Resources */,
 				D2DABF5322B48449003DBB32 /* MovieDetailsViewController.xib in Resources */,
 				D240E08F22B3071300D498C7 /* HomeViewController.xib in Resources */,
+				D2903F9722B6B1C500F07E04 /* SearchViewController.xib in Resources */,
 				D2C623EF22B3652C004FA027 /* MovieCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -561,6 +571,7 @@
 				D2C623F122B36999004FA027 /* Array.swift in Sources */,
 				D2C623D122B33ACC004FA027 /* LoginViewController.swift in Sources */,
 				D28DB34822B53EDA00D0B380 /* Date.swift in Sources */,
+				D2903F9922B6B27800F07E04 /* SearchViewModel.swift in Sources */,
 				D2DABF5D22B49A87003DBB32 /* ModularViewModel.swift in Sources */,
 				D2DABF5B22B49A6A003DBB32 /* ModularViewController.swift in Sources */,
 				D2C623DD22B35080004FA027 /* ValidateWithLoginInteractor.swift in Sources */,
@@ -589,6 +600,7 @@
 				D2DABF5222B48449003DBB32 /* MovieDetailsViewController.swift in Sources */,
 				D24373DB22B47E270012C737 /* HomeViewModel.swift in Sources */,
 				D2903F9322B6B08000F07E04 /* VoteAverageFormatter.swift in Sources */,
+				D2903F9622B6B1C500F07E04 /* SearchViewController.swift in Sources */,
 				D2C623B922B32584004FA027 /* LoaderObservable.swift in Sources */,
 				D2C623DA22B34B9A004FA027 /* GetAccountInteractor.swift in Sources */,
 				D240E08E22B3071300D498C7 /* HomeViewController.swift in Sources */,
