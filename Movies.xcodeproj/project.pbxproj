@@ -29,6 +29,8 @@
 		D2903FA622B6D1CC00F07E04 /* GetSimilarMoviesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903FA522B6D1CC00F07E04 /* GetSimilarMoviesInteractor.swift */; };
 		D2903FA922B6D30C00F07E04 /* GetSimilarMoviesInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903FA722B6D2BA00F07E04 /* GetSimilarMoviesInteractorTest.swift */; };
 		D2903FAB22B6D4F800F07E04 /* SearchObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903FAA22B6D4F800F07E04 /* SearchObservable.swift */; };
+		D2903FAE22B6EE2900F07E04 /* SectionTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903FAC22B6EE2900F07E04 /* SectionTitleTableViewCell.swift */; };
+		D2903FAF22B6EE2900F07E04 /* SectionTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2903FAD22B6EE2900F07E04 /* SectionTitleTableViewCell.xib */; };
 		D2C3200C22B2E7FF00263DAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C3200B22B2E7FF00263DAB /* AppDelegate.swift */; };
 		D2C3201322B2E80100263DAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2C3201222B2E80100263DAB /* Assets.xcassets */; };
 		D2C3201622B2E80100263DAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2C3201422B2E80100263DAB /* LaunchScreen.storyboard */; };
@@ -109,6 +111,8 @@
 		D2903FA522B6D1CC00F07E04 /* GetSimilarMoviesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSimilarMoviesInteractor.swift; sourceTree = "<group>"; };
 		D2903FA722B6D2BA00F07E04 /* GetSimilarMoviesInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSimilarMoviesInteractorTest.swift; sourceTree = "<group>"; };
 		D2903FAA22B6D4F800F07E04 /* SearchObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchObservable.swift; sourceTree = "<group>"; };
+		D2903FAC22B6EE2900F07E04 /* SectionTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTitleTableViewCell.swift; sourceTree = "<group>"; };
+		D2903FAD22B6EE2900F07E04 /* SectionTitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionTitleTableViewCell.xib; sourceTree = "<group>"; };
 		D2C3200822B2E7FF00263DAB /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2C3200B22B2E7FF00263DAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2C3201222B2E80100263DAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -348,6 +352,8 @@
 				D2903F8D22B608FA00F07E04 /* DescriptionTableViewCell.xib */,
 				D2903FA122B6B9D400F07E04 /* MovieTableViewCell.swift */,
 				D2903FA222B6B9D400F07E04 /* MovieTableViewCell.xib */,
+				D2903FAC22B6EE2900F07E04 /* SectionTitleTableViewCell.swift */,
+				D2903FAD22B6EE2900F07E04 /* SectionTitleTableViewCell.xib */,
 			);
 			path = SharedCells;
 			sourceTree = "<group>";
@@ -464,6 +470,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2903FAF22B6EE2900F07E04 /* SectionTitleTableViewCell.xib in Resources */,
 				D2C623D222B33ACC004FA027 /* LoginViewController.xib in Resources */,
 				D2C3201622B2E80100263DAB /* LaunchScreen.storyboard in Resources */,
 				D2903F8F22B608FA00F07E04 /* DescriptionTableViewCell.xib in Resources */,
@@ -608,6 +615,7 @@
 				D2C623BB22B325A0004FA027 /* LoaderDataFromServer.swift in Sources */,
 				D2903FA322B6B9D400F07E04 /* MovieTableViewCell.swift in Sources */,
 				D2DABF5222B48449003DBB32 /* MovieDetailsViewController.swift in Sources */,
+				D2903FAE22B6EE2900F07E04 /* SectionTitleTableViewCell.swift in Sources */,
 				D24373DB22B47E270012C737 /* HomeViewModel.swift in Sources */,
 				D2903F9322B6B08000F07E04 /* VoteAverageFormatter.swift in Sources */,
 				D2903F9622B6B1C500F07E04 /* SearchViewController.swift in Sources */,
