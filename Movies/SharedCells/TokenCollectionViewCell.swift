@@ -15,7 +15,7 @@ class TokenCollectionViewCell: UICollectionViewCell {
     var measuredSize: CGSize {
         let maxWidth: CGFloat = 200
         let lineHeight: CGFloat = 13
-        let paddingText: CGFloat = 10
+        let paddingText: CGFloat = 12
         let tokenHeight: CGFloat = 20
 
         guard let text = titleLabel?.text,
