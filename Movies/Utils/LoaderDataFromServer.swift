@@ -13,7 +13,7 @@ class LoaderDataFromServer {
                           headers: [String: String] = [:]) -> Observable<Data> {
 
         return Observable.create{ observer in
-            guard let url = URL(string: url) else {
+            guard let url = URL(string: url.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed) ?? "") else {
                 observer.onError(ServerErrors.invalidRequest)
 
                 return Disposables.create {}
