@@ -26,6 +26,8 @@
 		D2903FA022B6B67C00F07E04 /* SearchMoviesInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903F9F22B6B67C00F07E04 /* SearchMoviesInteractorTest.swift */; };
 		D2903FA322B6B9D400F07E04 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903FA122B6B9D400F07E04 /* MovieTableViewCell.swift */; };
 		D2903FA422B6B9D400F07E04 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2903FA222B6B9D400F07E04 /* MovieTableViewCell.xib */; };
+		D2903FA622B6D1CC00F07E04 /* GetSimilarMoviesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903FA522B6D1CC00F07E04 /* GetSimilarMoviesInteractor.swift */; };
+		D2903FA922B6D30C00F07E04 /* GetSimilarMoviesInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903FA722B6D2BA00F07E04 /* GetSimilarMoviesInteractorTest.swift */; };
 		D2C3200C22B2E7FF00263DAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C3200B22B2E7FF00263DAB /* AppDelegate.swift */; };
 		D2C3201322B2E80100263DAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2C3201222B2E80100263DAB /* Assets.xcassets */; };
 		D2C3201622B2E80100263DAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2C3201422B2E80100263DAB /* LaunchScreen.storyboard */; };
@@ -103,6 +105,8 @@
 		D2903F9F22B6B67C00F07E04 /* SearchMoviesInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMoviesInteractorTest.swift; sourceTree = "<group>"; };
 		D2903FA122B6B9D400F07E04 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		D2903FA222B6B9D400F07E04 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
+		D2903FA522B6D1CC00F07E04 /* GetSimilarMoviesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSimilarMoviesInteractor.swift; sourceTree = "<group>"; };
+		D2903FA722B6D2BA00F07E04 /* GetSimilarMoviesInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSimilarMoviesInteractorTest.swift; sourceTree = "<group>"; };
 		D2C3200822B2E7FF00263DAB /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2C3200B22B2E7FF00263DAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2C3201222B2E80100263DAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -281,6 +285,7 @@
 				D2C623E622B35EA4004FA027 /* GetUpcomingMoviesInteractor.swift */,
 				D2DABF6122B4A7E7003DBB32 /* GetGenresInteractor.swift */,
 				D2903F9D22B6B4D800F07E04 /* SearchMoviesInteractor.swift */,
+				D2903FA522B6D1CC00F07E04 /* GetSimilarMoviesInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -324,6 +329,7 @@
 				D2C623E822B360A5004FA027 /* GetUpcomingMoviesTest.swift */,
 				D2DABF6322B4A914003DBB32 /* GetGenresInteractorTest.swift */,
 				D2903F9F22B6B67C00F07E04 /* SearchMoviesInteractorTest.swift */,
+				D2903FA722B6D2BA00F07E04 /* GetSimilarMoviesInteractorTest.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -589,6 +595,7 @@
 				D240E08B22B3066F00D498C7 /* MVTabBarController.swift in Sources */,
 				D2903F9E22B6B4D800F07E04 /* SearchMoviesInteractor.swift in Sources */,
 				D2C3200C22B2E7FF00263DAB /* AppDelegate.swift in Sources */,
+				D2903FA622B6D1CC00F07E04 /* GetSimilarMoviesInteractor.swift in Sources */,
 				D2C623C022B326FE004FA027 /* Codable.swift in Sources */,
 				D2C623C822B327D9004FA027 /* CreateRequestTokenInteractor.swift in Sources */,
 				D2DABF6222B4A7E7003DBB32 /* GetGenresInteractor.swift in Sources */,
@@ -619,6 +626,7 @@
 				D2903FA022B6B67C00F07E04 /* SearchMoviesInteractorTest.swift in Sources */,
 				D2C623DF22B35166004FA027 /* ValidateWithLoginInteractorTest.swift in Sources */,
 				D2C623CE22B32E88004FA027 /* CreateRequestTokenInteractorTest.swift in Sources */,
+				D2903FA922B6D30C00F07E04 /* GetSimilarMoviesInteractorTest.swift in Sources */,
 				D2DABF6422B4A914003DBB32 /* GetGenresInteractorTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
