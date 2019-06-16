@@ -127,15 +127,19 @@ class ModularViewController<T : ModularViewModel> : UIViewController, UITableVie
         UIView.animate(withDuration: 0.3) { [weak self] in
             guard let strongSelf = self else { return }
 
-            if scrollView.contentOffset.y > 0 && scrollView.contentOffset.y < collapsibleHeaderView.getHalfHeaderSize() {
+            let visibleScrollableHeight =
+                collapsibleHeaderView.getMaximumHeaderSize() - scrollView.contentOffset.y
 
+            if visibleScrollableHeight < collapsibleHeaderView.getPinnedHeaderSize() {
+                return
+            }
+
+            if visibleScrollableHeight > collapsibleHeaderView.getHalfHeaderSize() {
                 scrollView.contentOffset = .zero
                 strongSelf.updateHeader(scrollView)
                 strongSelf.view.layoutIfNeeded()
             }
-            else if scrollView.contentOffset.y >= collapsibleHeaderView.getHalfHeaderSize()
-                && scrollView.contentOffset.y <= collapsibleHeaderView.getMaximumHeaderSize() {
-
+            else if visibleScrollableHeight < collapsibleHeaderView.getHalfHeaderSize() {
                 scrollView.contentOffset.y = collapsibleHeaderView.getScrollableHeaderSize()
                 strongSelf.updateHeader(scrollView)
                 strongSelf.view.layoutIfNeeded()

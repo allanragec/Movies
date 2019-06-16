@@ -65,6 +65,6 @@ extension CollapsibleHeaderView {
     }
 
     func getHalfHeaderSize() -> CGFloat {
-        return getMaximumHeaderSize() / 2
+        return getPinnedHeaderSize() + (getScrollableHeaderSize() / 2)
     }
 }
