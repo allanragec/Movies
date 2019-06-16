@@ -13,6 +13,10 @@ class VoteAverageFormatter: UICircularRingValueFormatter {
     func string(for value: Any) -> String? {
         guard let value = value as? CGFloat else { return nil }
 
+        if value == 0 {
+            return "NR"
+        }
+
         return String(format: "%.1f", value)
     }
 }
