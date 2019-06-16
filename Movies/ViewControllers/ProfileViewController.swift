@@ -31,6 +31,8 @@ class ProfileViewController: UIViewController {
     }
 
     private func setupLayout() {
+        navigationController?.navigationBar.isHidden = true
+        
         let isLogged = Settings.isLogged
 
         loginLogouButton?.setTitle(Settings.isLogged ? "Logout" : "Login", for: .normal)
