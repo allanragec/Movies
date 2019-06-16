@@ -14,3 +14,6 @@ protocol CellItemController {
     func openCell()
 }
 
+protocol ModuleController {
+    func cellItems() -> [CellItemController]
+}
