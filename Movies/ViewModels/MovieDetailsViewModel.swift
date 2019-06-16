@@ -76,8 +76,12 @@ extension MovieDetailsViewModel: ModularViewModel {
 
     func getItems() -> [CellItemController] {
         guard let movie = viewController?.movie else { return [] }
+
+        if !movie.overview.isEmpty {
+            return [DescriptionCellItem(description: movie.overview)]
+        }
         
-        return [DescriptionCellItem(description: movie.overview)]
+        return []
     }
 }
 
