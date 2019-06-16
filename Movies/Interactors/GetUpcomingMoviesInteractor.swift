@@ -58,6 +58,7 @@ struct Movie: Codable {
     let genreIds: [Int]
     let overview: String
     let originalLanguage: String
+    let voteAverage: Float
 
     func releaseDateAsDate() -> Date {
         let formatter = DateFormatter.dayFormatter
