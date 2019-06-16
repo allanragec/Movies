@@ -11,6 +11,14 @@ import UIKit
 class MovieDetailsViewController: ModularViewController<MovieDetailsViewModel> {
 
     @IBOutlet weak var tableView: UITableView?
+    @IBOutlet weak var headerView: UIView?
+    @IBOutlet weak var headerViewHeightConstraint: NSLayoutConstraint?
+    @IBOutlet weak var backdropImageView: UIImageView?
+    @IBOutlet weak var posterImageView: UIImageView?
+    @IBOutlet weak var movieTitleLabel: UILabel?
+    @IBOutlet weak var tokenView: TokensView?
+    @IBOutlet weak var releaseDateLabel: UILabel?
+    @IBOutlet weak var posterWidthConstraint: NSLayoutConstraint?
 
     let movie: Movie
 
@@ -40,5 +48,9 @@ class MovieDetailsViewController: ModularViewController<MovieDetailsViewModel> {
 
     override func getViewModel() -> MovieDetailsViewModel {
         return viewModel
+    }
+
+    @IBAction func backButton() {
+        navigationController?.popViewController(animated: true)
     }
 }
