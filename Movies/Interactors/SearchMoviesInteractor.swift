@@ -26,7 +26,7 @@ extension SearchMoviesInteractor: LoaderCodableObservable {
     typealias T = SearchMoviesResult
 
     func getUrl() -> String {
-        return "https://api.themoviedb.org/3/search/movie?api_key=\(Settings.API_KEY)&language=en-US&query=\(query)&page=\(page)&include_adult=false"
+        return "\(Settings.ENDPOINT)/3/search/movie?api_key=\(Settings.API_KEY)&language=en-US&query=\(query)&page=\(page)&include_adult=false"
     }
 }
 

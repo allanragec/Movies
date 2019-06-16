@@ -26,7 +26,7 @@ extension GetSimilarMoviesInteractor: LoaderCodableObservable {
     typealias T = SimilarMoviesResult
 
     func getUrl() -> String {
-        return "https://api.themoviedb.org/3/movie/\(movieId)/similar?api_key=\(Settings.API_KEY)&language=en-US&page=\(page)"
+        return "\(Settings.ENDPOINT)/3/movie/\(movieId)/similar?api_key=\(Settings.API_KEY)&language=en-US&page=\(page)"
     }
 }
 

@@ -29,7 +29,7 @@ extension ValidateWithLoginInteractor: LoaderCodableObservable {
     typealias T = RequestTokenResult
 
     func getUrl() -> String {
-        return "https://api.themoviedb.org/3/authentication/token/validate_with_login?api_key=\(Settings.API_KEY)"
+        return "\(Settings.ENDPOINT)/3/authentication/token/validate_with_login?api_key=\(Settings.API_KEY)"
     }
 
     func getBody() -> Data? {

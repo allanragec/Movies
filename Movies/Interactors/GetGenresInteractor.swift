@@ -19,7 +19,7 @@ extension GetGenresInteractor: LoaderCodableObservable {
     typealias T = GenresResult
 
     func getUrl() -> String {
-        return "https://api.themoviedb.org/3/genre/movie/list?api_key=\(Settings.API_KEY)&language=en-US"
+        return "\(Settings.ENDPOINT)/3/genre/movie/list?api_key=\(Settings.API_KEY)&language=en-US"
     }
 }
 

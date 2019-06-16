@@ -21,7 +21,7 @@ extension CreateSessionInteractor: LoaderCodableObservable {
     func getUrl() -> String {
         let requestToken = Settings.requestToken?.requestToken ?? ""
 
-        return "https://api.themoviedb.org/3/authentication/session/new?request_token=\(requestToken)&api_key=\(Settings.API_KEY)"
+        return "\(Settings.ENDPOINT)/3/authentication/session/new?request_token=\(requestToken)&api_key=\(Settings.API_KEY)"
     }
 }
 

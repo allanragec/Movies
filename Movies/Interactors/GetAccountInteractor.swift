@@ -21,7 +21,7 @@ extension GetAccountInteractor: LoaderCodableObservable {
     func getUrl() -> String {
         let sessionId = Settings.sessionId ?? ""
 
-        return "https://api.themoviedb.org/3/account?api_key=\(Settings.API_KEY)&session_id=\(sessionId)"
+        return "\(Settings.ENDPOINT)/3/account?api_key=\(Settings.API_KEY)&session_id=\(sessionId)"
     }
 }
 

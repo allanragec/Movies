@@ -19,7 +19,7 @@ extension CreateRequestTokenInteractor: LoaderCodableObservable {
     typealias T = RequestTokenResult
 
     func getUrl() -> String {
-        return "https://api.themoviedb.org/3/authentication/token/new?api_key=\(Settings.API_KEY)"
+        return "\(Settings.ENDPOINT)/authentication/token/new?api_key=\(Settings.API_KEY)"
     }
 }
 

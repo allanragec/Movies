@@ -37,7 +37,7 @@ extension GetUpcomingMoviesInteractor: LoaderCodableObservable {
     typealias T = UpcomingMoviesResult
 
     func getUrl() -> String {
-        return "https://api.themoviedb.org/3/movie/upcoming?api_key=\(Settings.API_KEY)&page=\(page)"
+        return "\(Settings.ENDPOINT)/3/movie/upcoming?api_key=\(Settings.API_KEY)&page=\(page)"
     }
 }
 

@@ -10,6 +10,7 @@ import Foundation
 import KeychainSwift
 
 class Settings {
+    static let ENDPOINT = "https://api.themoviedb.org"
     static let TOKEN = "tkSSA"
     static let EMAIL = "email"
     static let EXPIRATION_DATE = "expirationDate"
