@@ -44,7 +44,7 @@
                     </textAttributes>
                     <items>
                         <navigationItem title="Login" id="7Jm-iY-gkF">
-                            <barButtonItem key="rightBarButtonItem" style="plain" id="ztz-ZP-XkA">
+                            <barButtonItem key="rightBarButtonItem" style="done" id="ztz-ZP-XkA">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="f0F-Ry-UJd">
                                     <rect key="frame" x="302" y="7" width="92" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
