@@ -46,6 +46,9 @@
 		D2903FCB22B80EAE00F07E04 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903FCA22B80EAE00F07E04 /* ProfileViewModel.swift */; };
 		D2903FCE22B8117700F07E04 /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903FCC22B8117700F07E04 /* ButtonTableViewCell.swift */; };
 		D2903FCF22B8117700F07E04 /* ButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2903FCD22B8117700F07E04 /* ButtonTableViewCell.xib */; };
+		D2903FD222B81AC700F07E04 /* PushTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903FD022B81AC700F07E04 /* PushTitleTableViewCell.swift */; };
+		D2903FD322B81AC700F07E04 /* PushTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2903FD122B81AC700F07E04 /* PushTitleTableViewCell.xib */; };
+		D2903FD522B8224C00F07E04 /* SpaceCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903FD422B8224C00F07E04 /* SpaceCellItem.swift */; };
 		D2C3200C22B2E7FF00263DAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C3200B22B2E7FF00263DAB /* AppDelegate.swift */; };
 		D2C3201322B2E80100263DAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2C3201222B2E80100263DAB /* Assets.xcassets */; };
 		D2C3201622B2E80100263DAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2C3201422B2E80100263DAB /* LaunchScreen.storyboard */; };
@@ -143,6 +146,9 @@
 		D2903FCA22B80EAE00F07E04 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		D2903FCC22B8117700F07E04 /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
 		D2903FCD22B8117700F07E04 /* ButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonTableViewCell.xib; sourceTree = "<group>"; };
+		D2903FD022B81AC700F07E04 /* PushTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushTitleTableViewCell.swift; sourceTree = "<group>"; };
+		D2903FD122B81AC700F07E04 /* PushTitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PushTitleTableViewCell.xib; sourceTree = "<group>"; };
+		D2903FD422B8224C00F07E04 /* SpaceCellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceCellItem.swift; sourceTree = "<group>"; };
 		D2C3200822B2E7FF00263DAB /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2C3200B22B2E7FF00263DAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2C3201222B2E80100263DAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -415,6 +421,9 @@
 				D2903FBC22B7388500F07E04 /* MovieAccountStatesTableViewCell.xib */,
 				D2903FCC22B8117700F07E04 /* ButtonTableViewCell.swift */,
 				D2903FCD22B8117700F07E04 /* ButtonTableViewCell.xib */,
+				D2903FD022B81AC700F07E04 /* PushTitleTableViewCell.swift */,
+				D2903FD122B81AC700F07E04 /* PushTitleTableViewCell.xib */,
+				D2903FD422B8224C00F07E04 /* SpaceCellItem.swift */,
 			);
 			path = SharedCells;
 			sourceTree = "<group>";
@@ -533,6 +542,7 @@
 			files = (
 				D2903FAF22B6EE2900F07E04 /* SectionTitleTableViewCell.xib in Resources */,
 				D2C623D222B33ACC004FA027 /* LoginViewController.xib in Resources */,
+				D2903FD322B81AC700F07E04 /* PushTitleTableViewCell.xib in Resources */,
 				D2C3201622B2E80100263DAB /* LaunchScreen.storyboard in Resources */,
 				D2903FCF22B8117700F07E04 /* ButtonTableViewCell.xib in Resources */,
 				D2903F8F22B608FA00F07E04 /* DescriptionTableViewCell.xib in Resources */,
@@ -673,6 +683,7 @@
 				D2903F9E22B6B4D800F07E04 /* SearchMoviesInteractor.swift in Sources */,
 				D2C3200C22B2E7FF00263DAB /* AppDelegate.swift in Sources */,
 				D2903FB422B70D0E00F07E04 /* GetFavoriteMoviesInteractor.swift in Sources */,
+				D2903FD222B81AC700F07E04 /* PushTitleTableViewCell.swift in Sources */,
 				D2903FA622B6D1CC00F07E04 /* GetSimilarMoviesInteractor.swift in Sources */,
 				D2C623C022B326FE004FA027 /* Codable.swift in Sources */,
 				D2C623C822B327D9004FA027 /* CreateRequestTokenInteractor.swift in Sources */,
@@ -692,6 +703,7 @@
 				D2C623B922B32584004FA027 /* LoaderObservable.swift in Sources */,
 				D2C623DA22B34B9A004FA027 /* GetAccountInteractor.swift in Sources */,
 				D2903FB222B6FE9D00F07E04 /* SimilarModuleController.swift in Sources */,
+				D2903FD522B8224C00F07E04 /* SpaceCellItem.swift in Sources */,
 				D2903FAB22B6D4F800F07E04 /* SearchObservable.swift in Sources */,
 				D240E08E22B3071300D498C7 /* HomeViewController.swift in Sources */,
 				D2DABF6022B49AF1003DBB32 /* CellItemController.swift in Sources */,

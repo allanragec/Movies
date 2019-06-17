@@ -70,6 +70,7 @@ extension ProfileViewModel: ModularViewModel {
 
     func registerCellItems() {
         getTableView()?.register(cellController: ButtonCellItem.self)
+        getTableView()?.register(cellController: PushTitleCellItem.self)
     }
 
     func getTableView() -> UITableView? {
@@ -78,6 +79,17 @@ extension ProfileViewModel: ModularViewModel {
 
     func getItems() -> [CellItemController] {
         var cellItems = [CellItemController]()
+
+        let isLogged = Settings.isLogged
+
+        if isLogged {
+            cellItems.append(PushTitleCellItem(title: "Favorites", action: { [weak self] in
+            }))
+            cellItems.append(PushTitleCellItem(title: "Watchlist", action: { [weak self] in
+            }))
+
+            cellItems.append(SpaceCellItem(space: 20))
+        }
 
         let loginButtonTitle = Settings.isLogged ? "Logout" : "Login"
         cellItems.append(ButtonCellItem(title: loginButtonTitle, action: { [weak self] in
