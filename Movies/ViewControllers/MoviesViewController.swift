@@ -21,10 +21,12 @@ class MoviesViewController: UIViewController {
 
     let loaderMovies: LoaderMovies
     let customTitle: String?
+    let needToReloadOnWillAppear: Bool
 
-    init(loaderMovies: LoaderMovies, title: String? = nil) {
+    init(loaderMovies: LoaderMovies, title: String? = nil, needToReloadOnWillAppear: Bool = false) {
         self.loaderMovies = loaderMovies
         self.customTitle = title
+        self.needToReloadOnWillAppear = needToReloadOnWillAppear
         
         super.init(nibName: MoviesViewController.className, bundle: nil)
     }
@@ -37,6 +39,12 @@ class MoviesViewController: UIViewController {
         super.viewDidLoad()
 
         viewModel.viewDidLoad()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        viewModel.viewWillAppear()
     }
 
     @IBAction func backButton() {

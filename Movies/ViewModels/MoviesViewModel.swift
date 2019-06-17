@@ -51,6 +51,16 @@ class MoviesViewModel {
             viewController?.titleLabel?.text = customTitle
             viewController?.titleHeightConstraint?.constant = 60
         }
+    }
+
+    func viewWillAppear() {
+        let needToReloadOnWillAppear = viewController?.needToReloadOnWillAppear ?? false
+
+        if needToReloadOnWillAppear {
+            lastResult = nil
+            results.removeAll()
+            viewController?.collectionView?.reloadData()
+        }
 
         loadMovies()
     }
