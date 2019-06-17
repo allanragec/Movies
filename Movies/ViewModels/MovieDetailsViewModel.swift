@@ -141,7 +141,14 @@ extension MovieDetailsViewModel: ModularViewModel {
         var items = [CellItemController]()
 
         if let accountStates = accountStates {
-            items.append(MovieAccountStatesCellItem(accountStates: accountStates))
+            let movieAccountStatesCellItem = MovieAccountStatesCellItem(
+                accountStates: accountStates,
+                didUpdateMovieAccountState: { [weak self] updatedAccountStates in
+
+                self?.accountStates = updatedAccountStates
+            })
+            
+            items.append(movieAccountStatesCellItem)
         }
 
         if !movie.overview.isEmpty {

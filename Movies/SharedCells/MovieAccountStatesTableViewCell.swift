@@ -8,19 +8,25 @@
 
 import UIKit
 import UICircularProgressRing
+import RxSwift
+import NSObject_Rx
+
+typealias UpdateMovieAccountState = (MovieAccountStatesResult) -> Void
 
 class MovieAccountStatesCellItem: CellItemController {
     let accountStates: MovieAccountStatesResult
+    let didUpdateMovieAccountState: UpdateMovieAccountState
 
-    init(accountStates: MovieAccountStatesResult) {
+    init(accountStates: MovieAccountStatesResult, didUpdateMovieAccountState: @escaping UpdateMovieAccountState) {
         self.accountStates = accountStates
+        self.didUpdateMovieAccountState = didUpdateMovieAccountState
     }
 
     func cell(tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
         let identifier = type(of: self).getIdentifier()
 
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier) as? MovieAccountStatesTableViewCell
-        cell?.configure(accountStates: accountStates)
+        cell?.configure(accountStates: accountStates, didUpdateMovieAccountState: didUpdateMovieAccountState)
 
         return cell ?? UITableViewCell(frame: .zero)
     }
@@ -40,6 +46,7 @@ class MovieAccountStatesTableViewCell: UITableViewCell {
     @IBOutlet weak var watchListContainer: UIView?
 
     var accountStates: MovieAccountStatesResult?
+    var didUpdateMovieAccountState: UpdateMovieAccountState?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -61,11 +68,12 @@ class MovieAccountStatesTableViewCell: UITableViewCell {
         view.layer.borderColor = UIColor.white.cgColor
     }
 
-    func configure(accountStates: MovieAccountStatesResult) {
+    func configure(accountStates: MovieAccountStatesResult, didUpdateMovieAccountState: @escaping UpdateMovieAccountState) {
         self.accountStates = accountStates
+        self.didUpdateMovieAccountState = didUpdateMovieAccountState
 
-        favoriteButton?.tintColor = accountStates.favorite ? UIColor(named: "favoriteSelected") : .white
-        watchListButton?.tintColor = accountStates.watchlist ? UIColor(named: "watchListSelected") : .white
+        updateFavoriteButton(favorite: accountStates.favorite)
+        updateWatchlistButton(watchlist: accountStates.watchlist)
 
         userRateCircularView?.valueFormatter = VoteAverageFormatter()
         userRateCircularView?.style = .ontop
@@ -73,7 +81,35 @@ class MovieAccountStatesTableViewCell: UITableViewCell {
         userRateCircularView?.value = CGFloat(accountStates.validatedRated?.value ?? 0)
     }
 
+    private func updateFavoriteButton(favorite: Bool) {
+        favoriteButton?.tintColor = favorite ? UIColor(named: "favoriteSelected") : .white
+    }
+
+    private func updateWatchlistButton(watchlist: Bool) {
+        watchListButton?.tintColor = watchlist ? UIColor(named: "watchListSelected") : .white
+    }
+
     @IBAction func favoriteAction() {
+        guard let accountStates = accountStates else { return }
+        let movieId = accountStates.id
+
+        let backgroundThread = ConcurrentDispatchQueueScheduler(qos: .background)
+
+        let newState = !accountStates.favorite
+        updateFavoriteButton(favorite: newState)
+
+        FavoriteInteractor(favorite: newState, movieId: movieId)
+            .execute()
+            .flatMap { _ in GetMovieAccountStatesInteractor(movieId: movieId).execute() }
+            .subscribeOn(backgroundThread)
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { [weak self] result in
+                self?.didUpdateMovieAccountState?(result)
+            },
+            onError: { [weak self] error in
+                self?.updateFavoriteButton(favorite: !newState)
+            })
+            .disposed(by: rx.disposeBag)
     }
 
     @IBAction func watchListAction() {
