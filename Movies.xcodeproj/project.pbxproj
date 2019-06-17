@@ -36,6 +36,8 @@
 		D2903FB622B70F4800F07E04 /* GetFavoriteMoviesInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903FB522B70F4800F07E04 /* GetFavoriteMoviesInteractorTest.swift */; };
 		D2903FB822B7336500F07E04 /* GetMovieAccountStatesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903FB722B7336500F07E04 /* GetMovieAccountStatesInteractor.swift */; };
 		D2903FBA22B734AB00F07E04 /* GetMovieAccountStatesInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903FB922B734AB00F07E04 /* GetMovieAccountStatesInteractorTest.swift */; };
+		D2903FBD22B7388500F07E04 /* MovieAccountStatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903FBB22B7388500F07E04 /* MovieAccountStatesTableViewCell.swift */; };
+		D2903FBE22B7388500F07E04 /* MovieAccountStatesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2903FBC22B7388500F07E04 /* MovieAccountStatesTableViewCell.xib */; };
 		D2C3200C22B2E7FF00263DAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C3200B22B2E7FF00263DAB /* AppDelegate.swift */; };
 		D2C3201322B2E80100263DAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2C3201222B2E80100263DAB /* Assets.xcassets */; };
 		D2C3201622B2E80100263DAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2C3201422B2E80100263DAB /* LaunchScreen.storyboard */; };
@@ -123,6 +125,8 @@
 		D2903FB522B70F4800F07E04 /* GetFavoriteMoviesInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFavoriteMoviesInteractorTest.swift; sourceTree = "<group>"; };
 		D2903FB722B7336500F07E04 /* GetMovieAccountStatesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMovieAccountStatesInteractor.swift; sourceTree = "<group>"; };
 		D2903FB922B734AB00F07E04 /* GetMovieAccountStatesInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMovieAccountStatesInteractorTest.swift; sourceTree = "<group>"; };
+		D2903FBB22B7388500F07E04 /* MovieAccountStatesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAccountStatesTableViewCell.swift; sourceTree = "<group>"; };
+		D2903FBC22B7388500F07E04 /* MovieAccountStatesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieAccountStatesTableViewCell.xib; sourceTree = "<group>"; };
 		D2C3200822B2E7FF00263DAB /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2C3200B22B2E7FF00263DAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2C3201222B2E80100263DAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -377,6 +381,8 @@
 				D2903FA222B6B9D400F07E04 /* MovieTableViewCell.xib */,
 				D2903FAC22B6EE2900F07E04 /* SectionTitleTableViewCell.swift */,
 				D2903FAD22B6EE2900F07E04 /* SectionTitleTableViewCell.xib */,
+				D2903FBB22B7388500F07E04 /* MovieAccountStatesTableViewCell.swift */,
+				D2903FBC22B7388500F07E04 /* MovieAccountStatesTableViewCell.xib */,
 			);
 			path = SharedCells;
 			sourceTree = "<group>";
@@ -501,6 +507,7 @@
 				D2903FA422B6B9D400F07E04 /* MovieTableViewCell.xib in Resources */,
 				D2C623B522B31AE9004FA027 /* ProfileViewController.xib in Resources */,
 				D2DABF6822B4B307003DBB32 /* TokenCollectionViewCell.xib in Resources */,
+				D2903FBE22B7388500F07E04 /* MovieAccountStatesTableViewCell.xib in Resources */,
 				D2DABF5322B48449003DBB32 /* MovieDetailsViewController.xib in Resources */,
 				D240E08F22B3071300D498C7 /* HomeViewController.xib in Resources */,
 				D2903F9722B6B1C500F07E04 /* SearchViewController.xib in Resources */,
@@ -613,6 +620,7 @@
 				D2903F9922B6B27800F07E04 /* SearchViewModel.swift in Sources */,
 				D2DABF5D22B49A87003DBB32 /* ModularViewModel.swift in Sources */,
 				D2DABF5B22B49A6A003DBB32 /* ModularViewController.swift in Sources */,
+				D2903FBD22B7388500F07E04 /* MovieAccountStatesTableViewCell.swift in Sources */,
 				D2C623DD22B35080004FA027 /* ValidateWithLoginInteractor.swift in Sources */,
 				D2DABF6D22B4C641003DBB32 /* TokensView.swift in Sources */,
 				D2C623C622B327BE004FA027 /* Observable.swift in Sources */,
