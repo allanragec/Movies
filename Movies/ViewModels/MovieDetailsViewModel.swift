@@ -81,7 +81,7 @@ class MovieDetailsViewModel {
         guard let viewController = viewController else { return }
         let movie = viewController.movie
 
-        viewController.movieTitleLabel?.text = movie.title
+        viewController.movieTitleLabel?.text = movie.originalTitle
         viewController.releaseDateLabel?.text = movie.releaseDate.isEmpty ?
             "" : "Release \(movie.releaseDate)"
 

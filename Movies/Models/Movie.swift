@@ -11,6 +11,7 @@ import Foundation
 struct Movie: Codable {
     let id: Int64
     let title: String
+    let originalTitle: String
     let voteCount: Int64
     let popularity: Double
     let posterPath: String?

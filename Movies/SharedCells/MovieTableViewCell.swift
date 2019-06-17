@@ -65,7 +65,7 @@ class MovieTableViewCell: UITableViewCell {
     }
 
     func configure(movie: Movie) {
-        titleLabel?.text = movie.title
+        titleLabel?.text = movie.originalTitle
         releaseDateLabel?.text = movie.releaseDate.isEmpty ?
             "" : "Release \(movie.releaseDate)"
         genres = Settings.genres?.getTitles(ids: movie.genreIds) ?? []
