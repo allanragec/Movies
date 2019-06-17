@@ -29,7 +29,8 @@ class LoginViewController: UIViewController {
             .observeOn(MainScheduler.instance)
             .subscribe(
             onNext: { [weak self] result in
-                guard let url = URL(string: "https://www.themoviedb.org/authenticate/\(result.requestToken)") else { return }
+                guard let url = URL(string: "https://www.themoviedb.org/authenticate/\(result.requestToken)")
+                    else { return }
                 
                 print(result.requestToken)
                 self?.wkwebView?.load(URLRequest(url: url))

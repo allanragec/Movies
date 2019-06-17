@@ -9,44 +9,28 @@
 import UIKit
 import SDWebImage
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: ModularViewController<ProfileViewModel> {
     @IBOutlet weak var profileImage: UIImageView?
     @IBOutlet weak var profileLabel: UILabel?
-    @IBOutlet weak var loginLogouButton: UIButton?
+    @IBOutlet weak var tableView: UITableView?
+    @IBOutlet weak var headerView: UIView?
+    @IBOutlet weak var headerViewHeightConstraint: NSLayoutConstraint?
 
-    @IBAction func loginAction() {
-        if Settings.isLogged {
-            Settings.clearSession()
-            setupLayout()
-        }
-        else {
-            navigationController?.present(LoginViewController(), animated: true)
-        }
-    }
+    lazy var viewModel = {
+        return ProfileViewModel(self)
+    }()
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        setupLayout()
+        viewModel.viewWillAppear()
     }
 
-    private func setupLayout() {
-        navigationController?.navigationBar.isHidden = true
-        
-        let isLogged = Settings.isLogged
+    override func getTableView() -> UITableView? {
+        return tableView
+    }
 
-        loginLogouButton?.setTitle(Settings.isLogged ? "Logout" : "Login", for: .normal)
-
-        if isLogged {
-            let userAccount = Settings.userAccount
-            let gravatarHash = userAccount?.avatar?.gravatar?.hash ?? ""
-
-            profileImage?.sd_setImage(with: URL(string: "https://www.gravatar.com/avatar/\(gravatarHash)"))
-            profileLabel?.text = userAccount?.username
-        }
-        else {
-            profileImage?.image = nil
-            profileLabel?.text = nil
-        }
+    override func getViewModel() -> ProfileViewModel {
+        return viewModel
     }
 }
