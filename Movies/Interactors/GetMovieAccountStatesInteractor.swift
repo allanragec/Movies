@@ -30,11 +30,19 @@ extension GetMovieAccountStatesInteractor: LoaderCodableObservable {
     }
 }
 
-struct MovieAccountStatesResult: Codable {
+struct MovieAccountStatesResult: Codable, PersistableJsonAsDicionary {
     let id: Int64
     let favorite: Bool
     let watchlist: Bool
-    let rate: Rate?
+    var validatedRated: Rate?
+
+    mutating func saveDictionary(dictionary: [String : AnyObject]) {
+        if let ratedDictionary = dictionary["rated"] as? [String: AnyObject] {
+            let rated = try? Rate(with: ratedDictionary)
+
+            self.validatedRated = rated
+        }
+    }
 
     struct Rate: Codable {
         let value: Int
