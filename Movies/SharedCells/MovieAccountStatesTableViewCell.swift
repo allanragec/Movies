@@ -52,6 +52,12 @@ class MovieAccountStatesTableViewCell: UITableViewCell {
         super.awakeFromNib()
 
         setupLayout()
+
+        let favoriteTap = UITapGestureRecognizer(target: self, action: Selector(("favoriteAction")))
+        favoriteContainer?.addGestureRecognizer(favoriteTap)
+
+        let watchListTap = UITapGestureRecognizer(target: self, action: Selector(("watchListAction")))
+        watchListContainer?.addGestureRecognizer(watchListTap)
     }
 
     func setupLayout() {
