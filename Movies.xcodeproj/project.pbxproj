@@ -38,6 +38,9 @@
 		D2903FBA22B734AB00F07E04 /* GetMovieAccountStatesInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903FB922B734AB00F07E04 /* GetMovieAccountStatesInteractorTest.swift */; };
 		D2903FBD22B7388500F07E04 /* MovieAccountStatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903FBB22B7388500F07E04 /* MovieAccountStatesTableViewCell.swift */; };
 		D2903FBE22B7388500F07E04 /* MovieAccountStatesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2903FBC22B7388500F07E04 /* MovieAccountStatesTableViewCell.xib */; };
+		D2903FC022B75EE500F07E04 /* FavoriteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903FBF22B75EE500F07E04 /* FavoriteInteractor.swift */; };
+		D2903FC222B763EC00F07E04 /* FavoriteInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903FC122B763EC00F07E04 /* FavoriteInteractorTest.swift */; };
+		D2903FC522B7646000F07E04 /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903FC422B7646000F07E04 /* XCTestCase.swift */; };
 		D2C3200C22B2E7FF00263DAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C3200B22B2E7FF00263DAB /* AppDelegate.swift */; };
 		D2C3201322B2E80100263DAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2C3201222B2E80100263DAB /* Assets.xcassets */; };
 		D2C3201622B2E80100263DAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2C3201422B2E80100263DAB /* LaunchScreen.storyboard */; };
@@ -127,6 +130,9 @@
 		D2903FB922B734AB00F07E04 /* GetMovieAccountStatesInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMovieAccountStatesInteractorTest.swift; sourceTree = "<group>"; };
 		D2903FBB22B7388500F07E04 /* MovieAccountStatesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAccountStatesTableViewCell.swift; sourceTree = "<group>"; };
 		D2903FBC22B7388500F07E04 /* MovieAccountStatesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieAccountStatesTableViewCell.xib; sourceTree = "<group>"; };
+		D2903FBF22B75EE500F07E04 /* FavoriteInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteInteractor.swift; sourceTree = "<group>"; };
+		D2903FC122B763EC00F07E04 /* FavoriteInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteInteractorTest.swift; sourceTree = "<group>"; };
+		D2903FC422B7646000F07E04 /* XCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
 		D2C3200822B2E7FF00263DAB /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2C3200B22B2E7FF00263DAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2C3201222B2E80100263DAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -254,6 +260,14 @@
 			path = Modules;
 			sourceTree = "<group>";
 		};
+		D2903FC322B7644000F07E04 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D2903FC422B7646000F07E04 /* XCTestCase.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		D2C31FFF22B2E7FF00263DAB = {
 			isa = PBXGroup;
 			children = (
@@ -296,6 +310,7 @@
 		D2C3201F22B2E80100263DAB /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				D2903FC322B7644000F07E04 /* Extensions */,
 				D2C623C922B32C60004FA027 /* Interactors */,
 				D2C3202222B2E80100263DAB /* Info.plist */,
 				D2C623CC22B32E87004FA027 /* UnitTests-Bridging-Header.h */,
@@ -316,6 +331,7 @@
 				D2903FA522B6D1CC00F07E04 /* GetSimilarMoviesInteractor.swift */,
 				D2903FB322B70D0E00F07E04 /* GetFavoriteMoviesInteractor.swift */,
 				D2903FB722B7336500F07E04 /* GetMovieAccountStatesInteractor.swift */,
+				D2903FBF22B75EE500F07E04 /* FavoriteInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -363,6 +379,7 @@
 				D2903FA722B6D2BA00F07E04 /* GetSimilarMoviesInteractorTest.swift */,
 				D2903FB522B70F4800F07E04 /* GetFavoriteMoviesInteractorTest.swift */,
 				D2903FB922B734AB00F07E04 /* GetMovieAccountStatesInteractorTest.swift */,
+				D2903FC122B763EC00F07E04 /* FavoriteInteractorTest.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -626,6 +643,7 @@
 				D2C623C622B327BE004FA027 /* Observable.swift in Sources */,
 				D2C623E722B35EA4004FA027 /* GetUpcomingMoviesInteractor.swift in Sources */,
 				D2DABF5522B490CD003DBB32 /* UIViewController.swift in Sources */,
+				D2903FC022B75EE500F07E04 /* FavoriteInteractor.swift in Sources */,
 				D2903F9122B60A8900F07E04 /* UITableView.swift in Sources */,
 				D2C623C222B32729004FA027 /* DateFormatter.swift in Sources */,
 				D2DABF5922B4952E003DBB32 /* UIResponder.swift in Sources */,
@@ -671,10 +689,12 @@
 				D2C623E322B353E4004FA027 /* GetAccountInteractorTest.swift in Sources */,
 				D2903FA022B6B67C00F07E04 /* SearchMoviesInteractorTest.swift in Sources */,
 				D2903FB622B70F4800F07E04 /* GetFavoriteMoviesInteractorTest.swift in Sources */,
+				D2903FC222B763EC00F07E04 /* FavoriteInteractorTest.swift in Sources */,
 				D2C623DF22B35166004FA027 /* ValidateWithLoginInteractorTest.swift in Sources */,
 				D2903FBA22B734AB00F07E04 /* GetMovieAccountStatesInteractorTest.swift in Sources */,
 				D2C623CE22B32E88004FA027 /* CreateRequestTokenInteractorTest.swift in Sources */,
 				D2903FA922B6D30C00F07E04 /* GetSimilarMoviesInteractorTest.swift in Sources */,
+				D2903FC522B7646000F07E04 /* XCTestCase.swift in Sources */,
 				D2DABF6422B4A914003DBB32 /* GetGenresInteractorTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
