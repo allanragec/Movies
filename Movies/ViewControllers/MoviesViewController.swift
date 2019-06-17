@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class MoviesViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView?
@@ -15,6 +16,18 @@ class MoviesViewController: UIViewController {
     lazy var viewModel = {
         return MoviesViewModel(self)
     }()
+
+    let loaderMovies: LoaderMovies
+
+    init(loaderMovies: LoaderMovies) {
+        self.loaderMovies = loaderMovies
+        
+        super.init(nibName: MoviesViewController.className, bundle: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

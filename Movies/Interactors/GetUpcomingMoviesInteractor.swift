@@ -41,3 +41,9 @@ extension GetUpcomingMoviesInteractor: LoaderCodableObservable {
         return "\(Settings.ENDPOINT)/3/movie/upcoming?api_key=\(Settings.API_KEY)&page=\(page)"
     }
 }
+
+class UpcomingMoviesLoader: LoaderMovies {
+    func getObservable(page: Int) -> Observable<MoviesResult> {
+        return GetUpcomingMoviesInteractor(page: page).execute()
+    }
+}

@@ -17,9 +17,9 @@ class MoviesViewModel {
     var results: [Movie] = []
     var lastResult: MoviesResult?
 
-    var upcomingMoviesDisposable: Disposable? {
+    var moviesDisposable: Disposable? {
         didSet {
-            if upcomingMoviesDisposable != nil {
+            if moviesDisposable != nil {
                 if results.isEmpty {
                     viewController?.loadingActivityIndicator?.startAnimating()
                 }
@@ -73,7 +73,7 @@ class MoviesViewModel {
     // MARK: - UICollectionViewDelegate
 
     func willDisplay(at indexPath: IndexPath) {
-        let hasRequestRunning = upcomingMoviesDisposable != nil
+        let hasRequestRunning = moviesDisposable != nil
 
         if needToShowMore(row: indexPath.row) && !hasRequestRunning {
             loadMovies()
@@ -128,8 +128,9 @@ class MoviesViewModel {
 
         let backgroundThread = ConcurrentDispatchQueueScheduler(qos: .background)
 
-        upcomingMoviesDisposable = GetUpcomingMoviesInteractor(page: nextPage)
-            .execute()
+        moviesDisposable = viewController?
+            .loaderMovies
+            .getObservable(page: nextPage)
             .subscribeOn(backgroundThread)
             .observeOn(MainScheduler.instance)
             .subscribe(
@@ -140,10 +141,10 @@ class MoviesViewModel {
             },
             onError: { [weak self] error in
                 print(error)
-                self?.upcomingMoviesDisposable = nil
+                self?.moviesDisposable = nil
             },
             onCompleted: { [weak self] in
-                self?.upcomingMoviesDisposable = nil
+                self?.moviesDisposable = nil
 
                 guard let strongSelf = self,
                     let collectionView = strongSelf.viewController?.collectionView,
