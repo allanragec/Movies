@@ -43,6 +43,8 @@
 		D2903FC522B7646000F07E04 /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903FC422B7646000F07E04 /* XCTestCase.swift */; };
 		D2903FC722B76E9700F07E04 /* WatchlistInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903FC622B76E9700F07E04 /* WatchlistInteractor.swift */; };
 		D2903FC922B76EEE00F07E04 /* WatchlistInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903FC822B76EEE00F07E04 /* WatchlistInteractorTest.swift */; };
+		D2903FCE22B8117700F07E04 /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903FCC22B8117700F07E04 /* ButtonTableViewCell.swift */; };
+		D2903FCF22B8117700F07E04 /* ButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2903FCD22B8117700F07E04 /* ButtonTableViewCell.xib */; };
 		D2C3200C22B2E7FF00263DAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C3200B22B2E7FF00263DAB /* AppDelegate.swift */; };
 		D2C3201322B2E80100263DAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2C3201222B2E80100263DAB /* Assets.xcassets */; };
 		D2C3201622B2E80100263DAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2C3201422B2E80100263DAB /* LaunchScreen.storyboard */; };
@@ -137,6 +139,8 @@
 		D2903FC422B7646000F07E04 /* XCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
 		D2903FC622B76E9700F07E04 /* WatchlistInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistInteractor.swift; sourceTree = "<group>"; };
 		D2903FC822B76EEE00F07E04 /* WatchlistInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistInteractorTest.swift; sourceTree = "<group>"; };
+		D2903FCC22B8117700F07E04 /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
+		D2903FCD22B8117700F07E04 /* ButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonTableViewCell.xib; sourceTree = "<group>"; };
 		D2C3200822B2E7FF00263DAB /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2C3200B22B2E7FF00263DAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2C3201222B2E80100263DAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -406,6 +410,8 @@
 				D2903FAD22B6EE2900F07E04 /* SectionTitleTableViewCell.xib */,
 				D2903FBB22B7388500F07E04 /* MovieAccountStatesTableViewCell.swift */,
 				D2903FBC22B7388500F07E04 /* MovieAccountStatesTableViewCell.xib */,
+				D2903FCC22B8117700F07E04 /* ButtonTableViewCell.swift */,
+				D2903FCD22B8117700F07E04 /* ButtonTableViewCell.xib */,
 			);
 			path = SharedCells;
 			sourceTree = "<group>";
@@ -525,6 +531,7 @@
 				D2903FAF22B6EE2900F07E04 /* SectionTitleTableViewCell.xib in Resources */,
 				D2C623D222B33ACC004FA027 /* LoginViewController.xib in Resources */,
 				D2C3201622B2E80100263DAB /* LaunchScreen.storyboard in Resources */,
+				D2903FCF22B8117700F07E04 /* ButtonTableViewCell.xib in Resources */,
 				D2903F8F22B608FA00F07E04 /* DescriptionTableViewCell.xib in Resources */,
 				D2C3201322B2E80100263DAB /* Assets.xcassets in Resources */,
 				D2903FA422B6B9D400F07E04 /* MovieTableViewCell.xib in Resources */,
@@ -667,6 +674,7 @@
 				D2C623C822B327D9004FA027 /* CreateRequestTokenInteractor.swift in Sources */,
 				D2DABF6222B4A7E7003DBB32 /* GetGenresInteractor.swift in Sources */,
 				D2C623EE22B3652C004FA027 /* MovieCollectionViewCell.swift in Sources */,
+				D2903FCE22B8117700F07E04 /* ButtonTableViewCell.swift in Sources */,
 				D2DABF6722B4B307003DBB32 /* TokenCollectionViewCell.swift in Sources */,
 				D2C623B422B31AE9004FA027 /* ProfileViewController.swift in Sources */,
 				D2C623BB22B325A0004FA027 /* LoaderDataFromServer.swift in Sources */,
