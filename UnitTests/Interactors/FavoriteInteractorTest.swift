@@ -25,4 +25,3 @@ class FavoriteInteractorTest: XCTestCase {
         XCTAssertNotNil(result)
     }
 }
-

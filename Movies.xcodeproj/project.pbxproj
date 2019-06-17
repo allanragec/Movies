@@ -51,6 +51,8 @@
 		D2903FD522B8224C00F07E04 /* SpaceCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903FD422B8224C00F07E04 /* SpaceCellItem.swift */; };
 		D2903FD722B825CE00F07E04 /* MoviesResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903FD622B825CE00F07E04 /* MoviesResult.swift */; };
 		D2903FD922B82B8900F07E04 /* LoaderMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903FD822B82B8900F07E04 /* LoaderMovies.swift */; };
+		D2903FDB22B8352800F07E04 /* GetWatchlistMoviesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903FDA22B8352800F07E04 /* GetWatchlistMoviesInteractor.swift */; };
+		D2903FDD22B8359600F07E04 /* GetWatchlistInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903FDC22B8359600F07E04 /* GetWatchlistInteractorTest.swift */; };
 		D2C3200C22B2E7FF00263DAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C3200B22B2E7FF00263DAB /* AppDelegate.swift */; };
 		D2C3201322B2E80100263DAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2C3201222B2E80100263DAB /* Assets.xcassets */; };
 		D2C3201622B2E80100263DAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2C3201422B2E80100263DAB /* LaunchScreen.storyboard */; };
@@ -153,6 +155,8 @@
 		D2903FD422B8224C00F07E04 /* SpaceCellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceCellItem.swift; sourceTree = "<group>"; };
 		D2903FD622B825CE00F07E04 /* MoviesResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesResult.swift; sourceTree = "<group>"; };
 		D2903FD822B82B8900F07E04 /* LoaderMovies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderMovies.swift; sourceTree = "<group>"; };
+		D2903FDA22B8352800F07E04 /* GetWatchlistMoviesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWatchlistMoviesInteractor.swift; sourceTree = "<group>"; };
+		D2903FDC22B8359600F07E04 /* GetWatchlistInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWatchlistInteractorTest.swift; sourceTree = "<group>"; };
 		D2C3200822B2E7FF00263DAB /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2C3200B22B2E7FF00263DAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2C3201222B2E80100263DAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -355,6 +359,7 @@
 				D2903FB722B7336500F07E04 /* GetMovieAccountStatesInteractor.swift */,
 				D2903FBF22B75EE500F07E04 /* FavoriteInteractor.swift */,
 				D2903FC622B76E9700F07E04 /* WatchlistInteractor.swift */,
+				D2903FDA22B8352800F07E04 /* GetWatchlistMoviesInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -405,6 +410,7 @@
 				D2903FB922B734AB00F07E04 /* GetMovieAccountStatesInteractorTest.swift */,
 				D2903FC122B763EC00F07E04 /* FavoriteInteractorTest.swift */,
 				D2903FC822B76EEE00F07E04 /* WatchlistInteractorTest.swift */,
+				D2903FDC22B8359600F07E04 /* GetWatchlistInteractorTest.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -690,6 +696,7 @@
 				D240E08B22B3066F00D498C7 /* MVTabBarController.swift in Sources */,
 				D2903F9E22B6B4D800F07E04 /* SearchMoviesInteractor.swift in Sources */,
 				D2C3200C22B2E7FF00263DAB /* AppDelegate.swift in Sources */,
+				D2903FDB22B8352800F07E04 /* GetWatchlistMoviesInteractor.swift in Sources */,
 				D2903FB422B70D0E00F07E04 /* GetFavoriteMoviesInteractor.swift in Sources */,
 				D2903FD222B81AC700F07E04 /* PushTitleTableViewCell.swift in Sources */,
 				D2903FA622B6D1CC00F07E04 /* GetSimilarMoviesInteractor.swift in Sources */,
@@ -729,6 +736,7 @@
 				D2C623E322B353E4004FA027 /* GetAccountInteractorTest.swift in Sources */,
 				D2903FA022B6B67C00F07E04 /* SearchMoviesInteractorTest.swift in Sources */,
 				D2903FB622B70F4800F07E04 /* GetFavoriteMoviesInteractorTest.swift in Sources */,
+				D2903FDD22B8359600F07E04 /* GetWatchlistInteractorTest.swift in Sources */,
 				D2903FC222B763EC00F07E04 /* FavoriteInteractorTest.swift in Sources */,
 				D2C623DF22B35166004FA027 /* ValidateWithLoginInteractorTest.swift in Sources */,
 				D2903FBA22B734AB00F07E04 /* GetMovieAccountStatesInteractorTest.swift in Sources */,
