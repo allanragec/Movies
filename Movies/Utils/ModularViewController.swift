@@ -161,4 +161,3 @@ class ModularViewController<T : ModularViewModel> : UIViewController, UITableVie
         }
     }
 }
-
