@@ -22,6 +22,12 @@ class MovieDetailsViewModel {
         }
     }
 
+    var accountStates: MovieAccountStatesResult? {
+        didSet {
+            viewController?.tableView?.reloadData()
+        }
+    }
+
     // MARK: - LifeCycle
 
     init(_ viewController: MovieDetailsViewController) {
@@ -31,6 +37,7 @@ class MovieDetailsViewModel {
     func viewDidLoad() {
         setupHeaderView()
         similarSubscribe()
+        accountStatesSubscribe()
     }
 
     private func similarSubscribe() {
@@ -46,6 +53,24 @@ class MovieDetailsViewModel {
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { movies in
                 self.similars = movies
+            }, onError: { error in
+                self.verifyError(error)
+            })
+            .disposed(by: viewController.rx.disposeBag)
+    }
+
+    private func accountStatesSubscribe() {
+        guard let viewController = viewController, Settings.isLogged else { return }
+        let movie = viewController.movie
+
+        let backgroundThread = ConcurrentDispatchQueueScheduler(qos: .background)
+
+        GetMovieAccountStatesInteractor(movieId: movie.id)
+            .execute()
+            .subscribeOn(backgroundThread)
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { accountStates in
+                self.accountStates = accountStates
             }, onError: { error in
                 self.verifyError(error)
             })
@@ -103,6 +128,7 @@ extension MovieDetailsViewModel: ModularViewModel {
         getTableView()?.register(cellController: DescriptionCellItem.self)
         getTableView()?.register(cellController: SectionTitleCellItem.self)
         getTableView()?.register(cellController: MovieCellItem.self)
+        getTableView()?.register(cellController: MovieAccountStatesCellItem.self)
     }
 
     func getTableView() -> UITableView? {
@@ -113,6 +139,10 @@ extension MovieDetailsViewModel: ModularViewModel {
         guard let movie = viewController?.movie else { return [] }
 
         var items = [CellItemController]()
+
+        if let accountStates = accountStates {
+            items.append(MovieAccountStatesCellItem(accountStates: accountStates))
+        }
 
         if !movie.overview.isEmpty {
             items.append(DescriptionCellItem(description: movie.overview))
