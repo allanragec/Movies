@@ -37,6 +37,9 @@ class MovieDetailsViewModel {
     func viewDidLoad() {
         setupHeaderView()
         similarSubscribe()
+    }
+
+    func viewWillAppear() {
         accountStatesSubscribe()
     }
 
@@ -60,7 +63,11 @@ class MovieDetailsViewModel {
     }
 
     private func accountStatesSubscribe() {
-        guard let viewController = viewController, Settings.isLogged else { return }
+        guard let viewController = viewController, Settings.isLogged else {
+            getTableView()?.reloadData()
+
+            return
+        }
         let movie = viewController.movie
 
         let backgroundThread = ConcurrentDispatchQueueScheduler(qos: .background)
@@ -140,7 +147,7 @@ extension MovieDetailsViewModel: ModularViewModel {
 
         var items = [CellItemController]()
 
-        if let accountStates = accountStates {
+        if let accountStates = accountStates, Settings.isLogged {
             let movieAccountStatesCellItem = MovieAccountStatesCellItem(
                 accountStates: accountStates,
                 didUpdateMovieAccountState: { [weak self] updatedAccountStates in

@@ -38,6 +38,12 @@ class MovieDetailsViewController: ModularViewController<MovieDetailsViewModel> {
         fatalError("init(coder:) has not been implemented")
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        viewModel.viewWillAppear()
+    }
+
     override func getTableView() -> UITableView? {
         return tableView
     }
