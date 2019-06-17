@@ -89,8 +89,7 @@ class MovieDetailsViewModel {
         let movie = viewController.movie
 
         viewController.movieTitleLabel?.text = movie.originalTitle
-        viewController.releaseDateLabel?.text = movie.releaseDate.isEmpty ?
-            "" : "Release \(movie.releaseDate)"
+        viewController.releaseDateLabel?.text = movie.getReleaseDate()
 
         let userScoreCircular = viewController.userScoreCircularProgress
         userScoreCircular?.valueFormatter = VoteAverageFormatter()

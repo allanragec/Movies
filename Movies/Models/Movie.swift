@@ -16,7 +16,7 @@ struct Movie: Codable {
     let popularity: Double
     let posterPath: String?
     let backdropPath: String?
-    let releaseDate: String
+    let releaseDate: String?
     let genreIds: [Int]
     let overview: String
     let originalLanguage: String
@@ -25,6 +25,14 @@ struct Movie: Codable {
     func releaseDateAsDate() -> Date {
         let formatter = DateFormatter.dayFormatter
 
-        return formatter.date(from: releaseDate) ?? Date.minimumDate()
+        return formatter.date(from: releaseDate ?? "") ?? Date.minimumDate()
+    }
+
+    func getReleaseDate() -> String? {
+        guard let releaseDate = releaseDate, !releaseDate.isEmpty else {
+            return nil
+        }
+
+        return releaseDate
     }
 }

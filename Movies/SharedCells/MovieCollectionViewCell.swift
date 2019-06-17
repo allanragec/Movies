@@ -36,8 +36,7 @@ class MovieCollectionViewCell: UICollectionViewCell {
 
     func configure(movie: Movie) {
         titleLabel?.text = movie.title
-        releaseDateLabel?.text = movie.releaseDate.isEmpty ?
-            "" : "Release \(movie.releaseDate)"
+        releaseDateLabel?.text = movie.getReleaseDate() 
         genres = Settings.genres?.getTitles(ids: movie.genreIds) ?? []
 
         guard let posterPath = movie.posterPath else { return }
