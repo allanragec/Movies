@@ -24,4 +24,22 @@ class SearchViewController: ModularViewController<SearchViewModel> {
     override func getViewModel() -> SearchViewModel {
         return viewModel
     }
+
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        searchBar?.endEditing(true)
+    }
+}
+
+extension SearchViewController: UISearchBarDelegate {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = true
+    }
+
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = false
+    }
+
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.endEditing(true)
+    }
 }

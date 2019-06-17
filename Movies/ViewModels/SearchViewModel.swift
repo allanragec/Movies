@@ -27,13 +27,14 @@ class SearchViewModel {
     func viewDidLoad() {
         guard let viewController = viewController else { return }
 
+        setupSearchBar()
         viewController.navigationController?.navigationBar.isHidden = true
         registerCellItems()
 
         searchSubscribe()
     }
 
-    func searchSubscribe() {
+    private func searchSubscribe() {
         guard let viewController = viewController,
             let searchObservable = viewController.searchBar?.rx.text.asObservable()
             else { return }
@@ -66,6 +67,13 @@ class SearchViewModel {
 
     func refresh() {
         viewController?.refreshControl.endRefreshing()
+    }
+
+    private func setupSearchBar() {
+        viewController?.searchBar?.delegate = viewController
+
+        let attributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).setTitleTextAttributes(attributes, for: .normal)
     }
 
     private func updateData() {
