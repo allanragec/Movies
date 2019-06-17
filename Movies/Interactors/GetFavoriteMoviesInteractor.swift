@@ -31,3 +31,15 @@ extension GetFavoriteMoviesInteractor: LoaderCodableObservable {
         return "\(Settings.ENDPOINT)/3/account/\(account.id)/favorite/movies?api_key=\(Settings.API_KEY)&session_id=\(sessionId)&language=en-US&sort_by=created_at.asc&page=\(page)"
     }
 }
+
+class FavoriteMoviesLoader: LoaderMovies {
+    func getObservable(page: Int) -> Observable<MoviesResult> {
+        guard let accountResult = Settings.userAccount else {
+            return Observable.empty()
+        }
+
+        return GetFavoriteMoviesInteractor(account: accountResult, page: page)
+            .execute()
+    }
+}
+

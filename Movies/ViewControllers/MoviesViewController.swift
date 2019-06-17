@@ -12,15 +12,19 @@ import RxSwift
 class MoviesViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView?
     @IBOutlet weak var loadingActivityIndicator: UIActivityIndicatorView?
-    
+    @IBOutlet weak var titleLabel: UILabel?
+    @IBOutlet weak var titleHeightConstraint: NSLayoutConstraint?
+
     lazy var viewModel = {
         return MoviesViewModel(self)
     }()
 
     let loaderMovies: LoaderMovies
+    let customTitle: String?
 
-    init(loaderMovies: LoaderMovies) {
+    init(loaderMovies: LoaderMovies, title: String? = nil) {
         self.loaderMovies = loaderMovies
+        self.customTitle = title
         
         super.init(nibName: MoviesViewController.className, bundle: nil)
     }
@@ -33,6 +37,10 @@ class MoviesViewController: UIViewController {
         super.viewDidLoad()
 
         viewModel.viewDidLoad()
+    }
+
+    @IBAction func backButton() {
+        navigationController?.popViewController(animated: true)
     }
 }
 

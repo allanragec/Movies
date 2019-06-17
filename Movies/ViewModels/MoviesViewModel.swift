@@ -44,7 +44,13 @@ class MoviesViewModel {
         let nibCell = UINib(nibName: cell, bundle: nil)
 
         viewController?.collectionView?.register(nibCell, forCellWithReuseIdentifier: cell)
+
         viewController?.navigationController?.navigationBar.isHidden = true
+
+        if let customTitle = viewController?.customTitle {
+            viewController?.titleLabel?.text = customTitle
+            viewController?.titleHeightConstraint?.constant = 60
+        }
 
         loadMovies()
     }

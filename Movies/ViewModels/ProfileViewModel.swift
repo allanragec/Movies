@@ -84,6 +84,11 @@ extension ProfileViewModel: ModularViewModel {
 
         if isLogged {
             cellItems.append(PushTitleCellItem(title: "Favorites", action: { [weak self] in
+                let favoriteMoviesLoader = FavoriteMoviesLoader()
+                let moviesViewController = MoviesViewController(loaderMovies: favoriteMoviesLoader, title: "Favorites")
+
+                let navigation = self?.viewController?.navigationController
+                navigation?.pushViewController(moviesViewController, animated: true)
             }))
             cellItems.append(PushTitleCellItem(title: "Watchlist", action: { [weak self] in
             }))
