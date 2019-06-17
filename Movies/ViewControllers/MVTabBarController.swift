@@ -35,7 +35,7 @@ class MVTabBarController: UITabBarController, UITabBarControllerDelegate {
     func createTabs() {
         tabBar.isHidden = false
 
-        let homeNavigationController = createNavigationController(HomeViewController(),
+        let homeNavigationController = createNavigationController(MoviesViewController(),
                                                                   title: "Upcoming",
                                                                   icon: "movies")
 

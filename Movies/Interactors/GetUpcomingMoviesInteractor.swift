@@ -15,7 +15,7 @@ class GetUpcomingMoviesInteractor {
         self.page = page
     }
 
-    func execute() -> Observable<UpcomingMoviesResult> {
+    func execute() -> Observable<MoviesResult> {
         return createObservable()
             .map({ resultServer in
                 let upcomingMovies = resultServer
@@ -26,23 +26,18 @@ class GetUpcomingMoviesInteractor {
                             second.releaseDateAsDate().timeIntervalSince1970
                     })
 
-                return UpcomingMoviesResult(results: upcomingMovies,
+                return MoviesResult(results: upcomingMovies,
                                             page: resultServer.page,
-                                            totalPages: resultServer.totalPages)
+                                            totalPages: resultServer.totalPages,
+                                            totalResults: resultServer.totalResults)
             })
     }
 }
 
 extension GetUpcomingMoviesInteractor: LoaderCodableObservable {
-    typealias T = UpcomingMoviesResult
+    typealias T = MoviesResult
 
     func getUrl() -> String {
         return "\(Settings.ENDPOINT)/3/movie/upcoming?api_key=\(Settings.API_KEY)&page=\(page)"
     }
-}
-
-struct UpcomingMoviesResult: Codable {
-    let results: [Movie]
-    let page: Int
-    let totalPages: Int
 }

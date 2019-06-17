@@ -8,14 +8,14 @@
 
 import RxSwift
 
-class HomeViewModel {
+class MoviesViewModel {
 
-    weak var viewController: HomeViewController?
+    weak var viewController: MoviesViewController?
 
     let cell = MovieCollectionViewCell.className
 
     var results: [Movie] = []
-    var lastResult: UpcomingMoviesResult?
+    var lastResult: MoviesResult?
 
     var upcomingMoviesDisposable: Disposable? {
         didSet {
@@ -36,7 +36,7 @@ class HomeViewModel {
 
     // MARK: - LifeCycle
 
-    init(_ viewController: HomeViewController) {
+    init(_ viewController: MoviesViewController) {
         self.viewController = viewController
     }
 

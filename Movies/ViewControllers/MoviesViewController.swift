@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  MoviesViewController.swift
 //  Movies
 //
 //  Created by Allan Melo on 13/06/19.
@@ -8,12 +8,12 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class MoviesViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView?
     @IBOutlet weak var loadingActivityIndicator: UIActivityIndicatorView?
-
+    
     lazy var viewModel = {
-        return HomeViewModel(self)
+        return MoviesViewModel(self)
     }()
 
     override func viewDidLoad() {
@@ -23,7 +23,7 @@ class HomeViewController: UIViewController {
     }
 }
 
-extension HomeViewController: UICollectionViewDataSource {
+extension MoviesViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.getResultsCount()
     }
@@ -35,7 +35,7 @@ extension HomeViewController: UICollectionViewDataSource {
     }
 }
 
-extension HomeViewController: UICollectionViewDelegate {
+extension MoviesViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell,
                         forItemAt indexPath: IndexPath) {
         viewModel.willDisplay(at: indexPath)
@@ -46,7 +46,7 @@ extension HomeViewController: UICollectionViewDelegate {
     }
 }
 
-extension HomeViewController: UICollectionViewDelegateFlowLayout {
+extension MoviesViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {

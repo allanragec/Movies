@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Movies" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MoviesViewController" customModule="Movies" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="jep-Q7-skc" id="nJw-ip-PDh"/>
                 <outlet property="loadingActivityIndicator" destination="C1n-Ax-9lZ" id="DgJ-jf-KQ5"/>

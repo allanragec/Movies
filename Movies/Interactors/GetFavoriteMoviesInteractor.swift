@@ -17,24 +17,17 @@ class GetFavoriteMoviesInteractor {
         self.page = page
     }
 
-    func execute() -> Observable<FavoriteMoviesResult> {
+    func execute() -> Observable<MoviesResult> {
         return createObservable()
     }
 }
 
 extension GetFavoriteMoviesInteractor: LoaderCodableObservable {
-    typealias T = FavoriteMoviesResult
+    typealias T = MoviesResult
 
     func getUrl() -> String {
         let sessionId = Settings.sessionId ?? ""
 
         return "\(Settings.ENDPOINT)/3/account/\(account.id)/favorite/movies?api_key=\(Settings.API_KEY)&session_id=\(sessionId)&language=en-US&sort_by=created_at.asc&page=\(page)"
     }
-}
-
-struct FavoriteMoviesResult: Codable {
-    let results: [Movie]
-    let page: Int
-    let totalPages: Int
-    let totalResults: Int
 }
