@@ -15,7 +15,19 @@ enum CodableError: Error {
 extension Decodable {
 
     init(with data: Data) throws {
-        self = try Self.decoder().decode(Self.self, from: data)
+        let item = try Self.decoder().decode(Self.self, from: data)
+
+        if var persistableJsonAsDicionary = item as? PersistableJsonAsDicionary,
+            let dictionary = try? JSONSerialization.jsonObject(with: data, options: .allowFragments)
+                as? [String: AnyObject] {
+
+            persistableJsonAsDicionary.saveDictionary(dictionary: dictionary)
+
+            self = persistableJsonAsDicionary as? Self ?? item
+        }
+        else {
+            self = item
+        }
     }
 
     init(with json: [String: AnyObject]) throws {
@@ -68,3 +80,6 @@ extension Encodable {
     }
 }
 
+protocol PersistableJsonAsDicionary {
+    mutating func saveDictionary(dictionary: [String: AnyObject])
+}
