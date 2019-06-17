@@ -14,16 +14,7 @@ class GetFavoriteMoviesInteractorTest: XCTestCase {
     override func setUp() {
         Settings.clearSession()
 
-        let createTokenInteractor = CreateRequestTokenInteractor()
-        let requestToken = createTokenInteractor.execute().result()?.requestToken ?? ""
-
-        let validateTokenInteractor = ValidateWithLoginInteractor(requestToken: requestToken, username: "unittestsmoviedb", password: "12345")
-
-        _ = validateTokenInteractor.execute().result()
-
-        _ = CreateSessionInteractor().execute().result()
-
-        _ = GetAccountInteractor().execute().result()
+        generateSession(withAccount: true)
     }
 
     func testGetFavoriteMoviesInteractor() {

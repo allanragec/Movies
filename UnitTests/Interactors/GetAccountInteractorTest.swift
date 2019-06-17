@@ -17,16 +17,7 @@ class GetAccountInteractorTest: XCTestCase {
 
         Settings.clearSession()
 
-        let createTokenInteractor = CreateRequestTokenInteractor()
-        let requestToken = createTokenInteractor.execute().result()?.requestToken ?? ""
-
-        let validateTokenInteractor = ValidateWithLoginInteractor(requestToken: requestToken, username: "unittestsmoviedb", password: "12345")
-
-        _ = validateTokenInteractor.execute().result()
-
-        let createSessionInteractor = CreateSessionInteractor()
-
-        _ = createSessionInteractor.execute().result()
+        generateSession()
     }
 
     func testCreateSessionInteractor() {
