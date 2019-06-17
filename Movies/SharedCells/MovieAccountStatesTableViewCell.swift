@@ -113,5 +113,25 @@ class MovieAccountStatesTableViewCell: UITableViewCell {
     }
 
     @IBAction func watchListAction() {
+        guard let accountStates = accountStates else { return }
+        let movieId = accountStates.id
+
+        let backgroundThread = ConcurrentDispatchQueueScheduler(qos: .background)
+
+        let newState = !accountStates.watchlist
+        updateWatchlistButton(watchlist: newState)
+
+        WatchlistInteractor(watchlist: newState, movieId: movieId)
+            .execute()
+            .flatMap { _ in GetMovieAccountStatesInteractor(movieId: movieId).execute() }
+            .subscribeOn(backgroundThread)
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { [weak self] result in
+                self?.didUpdateMovieAccountState?(result)
+            },
+            onError: { [weak self] error in
+                self?.updateWatchlistButton(watchlist: !newState)
+            })
+            .disposed(by: rx.disposeBag)
     }
 }
