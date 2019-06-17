@@ -18,13 +18,13 @@ class MovieDetailsViewModel {
 
     var similars: [Movie] = [] {
         didSet {
-            viewController?.tableView?.reloadData()
+            getTableView()?.reloadData()
         }
     }
 
     var accountStates: MovieAccountStatesResult? {
         didSet {
-            viewController?.tableView?.reloadData()
+            getTableView()?.reloadData()
         }
     }
 
