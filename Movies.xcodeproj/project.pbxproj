@@ -41,6 +41,8 @@
 		D2903FC022B75EE500F07E04 /* FavoriteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903FBF22B75EE500F07E04 /* FavoriteInteractor.swift */; };
 		D2903FC222B763EC00F07E04 /* FavoriteInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903FC122B763EC00F07E04 /* FavoriteInteractorTest.swift */; };
 		D2903FC522B7646000F07E04 /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903FC422B7646000F07E04 /* XCTestCase.swift */; };
+		D2903FC722B76E9700F07E04 /* WatchlistInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903FC622B76E9700F07E04 /* WatchlistInteractor.swift */; };
+		D2903FC922B76EEE00F07E04 /* WatchlistInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2903FC822B76EEE00F07E04 /* WatchlistInteractorTest.swift */; };
 		D2C3200C22B2E7FF00263DAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C3200B22B2E7FF00263DAB /* AppDelegate.swift */; };
 		D2C3201322B2E80100263DAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2C3201222B2E80100263DAB /* Assets.xcassets */; };
 		D2C3201622B2E80100263DAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2C3201422B2E80100263DAB /* LaunchScreen.storyboard */; };
@@ -133,6 +135,8 @@
 		D2903FBF22B75EE500F07E04 /* FavoriteInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteInteractor.swift; sourceTree = "<group>"; };
 		D2903FC122B763EC00F07E04 /* FavoriteInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteInteractorTest.swift; sourceTree = "<group>"; };
 		D2903FC422B7646000F07E04 /* XCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
+		D2903FC622B76E9700F07E04 /* WatchlistInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistInteractor.swift; sourceTree = "<group>"; };
+		D2903FC822B76EEE00F07E04 /* WatchlistInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistInteractorTest.swift; sourceTree = "<group>"; };
 		D2C3200822B2E7FF00263DAB /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2C3200B22B2E7FF00263DAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2C3201222B2E80100263DAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -332,6 +336,7 @@
 				D2903FB322B70D0E00F07E04 /* GetFavoriteMoviesInteractor.swift */,
 				D2903FB722B7336500F07E04 /* GetMovieAccountStatesInteractor.swift */,
 				D2903FBF22B75EE500F07E04 /* FavoriteInteractor.swift */,
+				D2903FC622B76E9700F07E04 /* WatchlistInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -380,6 +385,7 @@
 				D2903FB522B70F4800F07E04 /* GetFavoriteMoviesInteractorTest.swift */,
 				D2903FB922B734AB00F07E04 /* GetMovieAccountStatesInteractorTest.swift */,
 				D2903FC122B763EC00F07E04 /* FavoriteInteractorTest.swift */,
+				D2903FC822B76EEE00F07E04 /* WatchlistInteractorTest.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -644,6 +650,7 @@
 				D2C623E722B35EA4004FA027 /* GetUpcomingMoviesInteractor.swift in Sources */,
 				D2DABF5522B490CD003DBB32 /* UIViewController.swift in Sources */,
 				D2903FC022B75EE500F07E04 /* FavoriteInteractor.swift in Sources */,
+				D2903FC722B76E9700F07E04 /* WatchlistInteractor.swift in Sources */,
 				D2903F9122B60A8900F07E04 /* UITableView.swift in Sources */,
 				D2C623C222B32729004FA027 /* DateFormatter.swift in Sources */,
 				D2DABF5922B4952E003DBB32 /* UIResponder.swift in Sources */,
@@ -685,6 +692,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2C623E122B352B5004FA027 /* CreateSessionInteractorTest.swift in Sources */,
+				D2903FC922B76EEE00F07E04 /* WatchlistInteractorTest.swift in Sources */,
 				D2C623EA22B360D2004FA027 /* GetUpcomingMoviesTest.swift in Sources */,
 				D2C623E322B353E4004FA027 /* GetAccountInteractorTest.swift in Sources */,
 				D2903FA022B6B67C00F07E04 /* SearchMoviesInteractorTest.swift in Sources */,
