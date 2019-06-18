@@ -14,7 +14,11 @@ class MoviesViewModel {
 
     let cell = MovieCollectionViewCell.className
 
-    var results: [Movie] = []
+    var results: [Movie] = [] {
+        didSet {
+            viewController?.emptyLabel?.isHidden = !results.isEmpty
+        }
+    }
     var lastResult: MoviesResult?
 
     var moviesDisposable: Disposable? {
@@ -22,6 +26,7 @@ class MoviesViewModel {
             if moviesDisposable != nil {
                 if results.isEmpty {
                     viewController?.loadingActivityIndicator?.startAnimating()
+                    viewController?.emptyLabel?.isHidden = true
                 }
 
                 UIApplication.shared.isNetworkActivityIndicatorVisible = true

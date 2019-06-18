@@ -14,7 +14,8 @@ class MoviesViewController: UIViewController {
     @IBOutlet weak var loadingActivityIndicator: UIActivityIndicatorView?
     @IBOutlet weak var titleLabel: UILabel?
     @IBOutlet weak var titleHeightConstraint: NSLayoutConstraint?
-
+    @IBOutlet weak var emptyLabel: UILabel?
+    
     lazy var viewModel = {
         return MoviesViewModel(self)
     }()

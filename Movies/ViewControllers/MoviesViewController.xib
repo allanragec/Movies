@@ -14,6 +14,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MoviesViewController" customModule="Movies" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="jep-Q7-skc" id="nJw-ip-PDh"/>
+                <outlet property="emptyLabel" destination="unf-2Q-SFC" id="g8C-ZB-mim"/>
                 <outlet property="loadingActivityIndicator" destination="C1n-Ax-9lZ" id="DgJ-jf-KQ5"/>
                 <outlet property="titleHeightConstraint" destination="K5b-zg-aLb" id="mDz-uR-ll7"/>
                 <outlet property="titleLabel" destination="Z3H-IZ-E1W" id="4q1-Q3-Zu4"/>
@@ -83,6 +84,12 @@
                     <rect key="frame" x="197" y="443" width="20" height="20"/>
                     <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </activityIndicatorView>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ops... it's empty here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unf-2Q-SFC">
+                    <rect key="frame" x="113" y="440" width="188" height="26"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" name="primaryColor"/>
             <constraints>
@@ -92,6 +99,8 @@
                 <constraint firstItem="fmo-hz-UYu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="FnT-zZ-sQC"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jep-Q7-skc" secondAttribute="trailing" id="N6T-W1-dAy"/>
                 <constraint firstItem="jep-Q7-skc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Tz4-FY-zOC"/>
+                <constraint firstItem="unf-2Q-SFC" firstAttribute="centerX" secondItem="jep-Q7-skc" secondAttribute="centerX" id="cDN-gt-Zba"/>
+                <constraint firstItem="unf-2Q-SFC" firstAttribute="centerY" secondItem="jep-Q7-skc" secondAttribute="centerY" id="gda-mz-l6J"/>
                 <constraint firstItem="C1n-Ax-9lZ" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="jga-zP-K10"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fmo-hz-UYu" secondAttribute="trailing" id="ln6-5D-WIx"/>
                 <constraint firstItem="fmo-hz-UYu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="yu9-TY-qsk"/>
