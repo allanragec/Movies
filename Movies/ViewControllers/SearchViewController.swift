@@ -28,6 +28,12 @@ class SearchViewController: ModularViewController<SearchViewModel> {
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         searchBar?.endEditing(true)
     }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        searchBar?.endEditing(true)
+    }
 }
 
 extension SearchViewController: UISearchBarDelegate {
