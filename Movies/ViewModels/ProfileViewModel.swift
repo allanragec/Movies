@@ -105,9 +105,9 @@ extension ProfileViewModel: ModularViewModel {
                 navigation?.pushViewController(moviesViewController, animated: true)
             }))
             cellItems.append(PushTitleCellItem(title: "Watchlist", action: { [weak self] in
-                let watchMoviesLoader = WatchMoviesLoader()
+                let watchMoviesLoader = WatchlistMoviesLoader()
                 let moviesViewController = MoviesViewController(loaderMovies: watchMoviesLoader,
-                                                                title: "Watchmovies",
+                                                                title: "Watchlist",
                                                                 needToReloadOnWillAppear: true)
 
                 let navigation = self?.viewController?.navigationController

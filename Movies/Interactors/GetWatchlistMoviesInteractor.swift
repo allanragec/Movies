@@ -32,7 +32,7 @@ extension GetWatchlistMoviesInteractor: LoaderCodableObservable {
     }
 }
 
-class WatchMoviesLoader: LoaderMovies {
+class WatchlistMoviesLoader: LoaderMovies {
     func getObservable(page: Int) -> Observable<MoviesResult> {
         guard let accountResult = Settings.userAccount else {
             return Observable.empty()
