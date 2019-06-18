@@ -158,6 +158,7 @@ class MoviesViewModel {
             onError: { [weak self] error in
                 print(error)
                 self?.moviesDisposable = nil
+                self?.viewController?.showInternetAlertError()
             },
             onCompleted: { [weak self] in
                 self?.moviesDisposable = nil

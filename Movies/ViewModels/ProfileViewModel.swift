@@ -73,10 +73,6 @@ class ProfileViewModel {
             viewController?.navigationController?.present(LoginViewController(), animated: true)
         }
     }
-
-    private func verifyError(_ error: Error) {
-        print("error \(error)")
-    }
 }
 
 extension ProfileViewModel: ModularViewModel {

@@ -88,6 +88,7 @@ class SearchViewModel {
         viewController?.activityIndicator?.stopAnimating()
 
         searchSubscribe()
+        viewController?.showInternetAlertError()
     }
 }
 
