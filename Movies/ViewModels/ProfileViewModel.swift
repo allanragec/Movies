@@ -47,11 +47,27 @@ class ProfileViewModel {
         }
     }
 
+    private func logout() {
+        Settings.clearSession()
+        setupHeaderView()
+        getTableView()?.reloadData()
+    }
+
     private func loginAction() {
         if Settings.isLogged {
-            Settings.clearSession()
-            setupHeaderView()
-            getTableView()?.reloadData()
+            let alert = UIAlertController(title: "Warning",
+                                          message: "Do you really want log out ?",
+                                          preferredStyle: .alert)
+
+            alert.addAction(UIAlertAction(title: "Yes",
+                                          style: .destructive,
+                                          handler: { [weak self] _ in
+                self?.logout()
+            }))
+
+            alert.addAction(UIAlertAction(title: "No", style: .default))
+
+            viewController?.present(alert, animated: true)
         }
         else {
             viewController?.navigationController?.present(LoginViewController(), animated: true)
