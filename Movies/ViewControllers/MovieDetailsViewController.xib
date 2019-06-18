@@ -168,10 +168,10 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCa-Ai-GXV" userLabel="backButton">
-                    <rect key="frame" x="20" y="64" width="15" height="22"/>
+                    <rect key="frame" x="10" y="48.5" width="35" height="51"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="15" id="5rv-TV-EAo"/>
-                        <constraint firstAttribute="height" constant="22" id="Os1-0N-OMs"/>
+                        <constraint firstAttribute="width" constant="35" id="5rv-TV-EAo"/>
+                        <constraint firstAttribute="width" secondItem="cCa-Ai-GXV" secondAttribute="height" multiplier="15:22" id="nIf-Fx-u2M"/>
                     </constraints>
                     <state key="normal" image="backButton"/>
                     <connections>
@@ -182,14 +182,14 @@
             <color key="backgroundColor" name="primaryColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Leg-Hw-rVi" secondAttribute="trailing" id="0gK-5g-F8w"/>
+                <constraint firstItem="cCa-Ai-GXV" firstAttribute="centerY" secondItem="3xv-hD-AKQ" secondAttribute="centerY" id="10G-bN-yL0"/>
                 <constraint firstItem="MIm-Xi-9EY" firstAttribute="top" secondItem="Leg-Hw-rVi" secondAttribute="top" id="2mO-EZ-Zgy"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="leading" secondItem="Leg-Hw-rVi" secondAttribute="leading" id="6m6-vn-MZ3"/>
                 <constraint firstItem="MIm-Xi-9EY" firstAttribute="leading" secondItem="Leg-Hw-rVi" secondAttribute="leading" id="Jfx-kc-KlN"/>
                 <constraint firstItem="Leg-Hw-rVi" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="cAb-c6-MiC"/>
-                <constraint firstItem="cCa-Ai-GXV" firstAttribute="leading" secondItem="MIm-Xi-9EY" secondAttribute="leading" constant="20" id="cTo-a0-kDZ"/>
+                <constraint firstItem="cCa-Ai-GXV" firstAttribute="leading" secondItem="MIm-Xi-9EY" secondAttribute="leading" constant="10" id="cTo-a0-kDZ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Leg-Hw-rVi" secondAttribute="bottom" id="d4V-qf-ncT"/>
                 <constraint firstItem="MIm-Xi-9EY" firstAttribute="trailing" secondItem="Leg-Hw-rVi" secondAttribute="trailing" id="h2T-yt-L3U"/>
-                <constraint firstItem="cCa-Ai-GXV" firstAttribute="top" secondItem="MIm-Xi-9EY" secondAttribute="top" constant="20" id="x6l-Tq-yeQ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="47.826086956521742" y="35.491071428571423"/>

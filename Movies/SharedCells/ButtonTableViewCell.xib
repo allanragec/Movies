@@ -13,18 +13,18 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="ButtonTableViewCell" customModule="Movies" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="53" id="KGk-i7-Jjw" customClass="ButtonTableViewCell" customModule="Movies" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="53"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="52.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5z-eP-y0T">
-                        <rect key="frame" x="20" y="6" width="280" height="30"/>
+                        <rect key="frame" x="20" y="6" width="280" height="40"/>
                         <color key="backgroundColor" red="0.37372827529907227" green="0.81489163637161255" blue="0.52544647455215454" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="30" id="c9Z-Di-Ha0"/>
+                            <constraint firstAttribute="height" constant="40" id="c9Z-Di-Ha0"/>
                         </constraints>
                         <state key="normal" title="Button">
                             <color key="titleColor" name="primaryColor"/>
@@ -40,10 +40,10 @@
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="E5z-eP-y0T" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="9SV-pU-gCd"/>
                     <constraint firstItem="E5z-eP-y0T" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Mrc-Bh-qIa"/>
-                    <constraint firstAttribute="bottom" secondItem="E5z-eP-y0T" secondAttribute="bottom" constant="7.5" id="jkP-Yc-OzV"/>
+                    <constraint firstItem="E5z-eP-y0T" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="i0l-ny-nYa"/>
                     <constraint firstAttribute="trailing" secondItem="E5z-eP-y0T" secondAttribute="trailing" constant="20" id="lXE-g6-PF4"/>
+                    <constraint firstAttribute="bottom" secondItem="E5z-eP-y0T" secondAttribute="bottom" constant="6.5" id="o1L-0H-n0O"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" name="primaryColor"/>
@@ -51,6 +51,7 @@
             <connections>
                 <outlet property="button" destination="E5z-eP-y0T" id="Z9D-7g-t2i"/>
             </connections>
+            <point key="canvasLocation" x="47.826086956521742" y="38.504464285714285"/>
         </tableViewCell>
     </objects>
     <resources>
