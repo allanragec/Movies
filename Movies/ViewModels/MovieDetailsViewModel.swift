@@ -10,7 +10,6 @@ import UIKit
 import SDWebImage
 import UICircularProgressRing
 import RxSwift
-import NSObject_Rx
 
 class MovieDetailsViewModel {
 
@@ -49,7 +48,7 @@ class MovieDetailsViewModel {
 
          let backgroundThread = ConcurrentDispatchQueueScheduler(qos: .background)
 
-        GetSimilarMoviesInteractor(movieId: movie.id)
+        let _ = GetSimilarMoviesInteractor(movieId: movie.id)
             .execute()
             .map { result in result.results }
             .subscribeOn(backgroundThread)
@@ -59,7 +58,6 @@ class MovieDetailsViewModel {
             }, onError: { error in
                 self.verifyError(error)
             })
-            .disposed(by: viewController.rx.disposeBag)
     }
 
     private func accountStatesSubscribe() {

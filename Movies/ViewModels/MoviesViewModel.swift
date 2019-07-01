@@ -12,7 +12,7 @@ class MoviesViewModel {
 
     weak var viewController: MoviesViewController?
 
-    let cell = MovieCollectionViewCell.className
+    let cell = "MovieCollectionViewCell"
 
     var results: [Movie] = [] {
         didSet {

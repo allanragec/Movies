@@ -29,11 +29,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func updateGenres() {
         let backgroundThread = ConcurrentDispatchQueueScheduler(qos: .background)
 
-        GetGenresInteractor()
+        let _ = GetGenresInteractor()
             .execute()
             .subscribeOn(backgroundThread)
             .subscribe()
-            .disposed(by: rx.disposeBag)
     }
 }
 

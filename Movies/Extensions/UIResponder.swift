@@ -9,10 +9,6 @@
 import UIKit
 
 extension UIResponder {
-    static var className: String {
-        return String(describing: self)
-    }
-
     var isLandscape: Bool {
         return UIDevice.current.orientation.isLandscape
     }

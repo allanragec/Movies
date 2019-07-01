@@ -31,7 +31,7 @@ class MovieDetailsViewController: ModularViewController<MovieDetailsViewModel> {
     public init(movie: Movie) {
         self.movie = movie
 
-        super.init(nibName: MovieDetailsViewController.className, bundle: nil)
+        super.init(nibName: "MovieDetailsViewController", bundle: nil)
     }
 
     required init?(coder aDecoder: NSCoder) {

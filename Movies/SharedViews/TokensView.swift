@@ -10,7 +10,7 @@ import UIKit
 import AlignedCollectionViewFlowLayout
 
 class TokensView: UICollectionView {
-    let cell = TokenCollectionViewCell.className
+    let cell = "TokenCollectionViewCell"
 
     var tokens: [String] = [] {
         didSet {

@@ -29,7 +29,7 @@ class MoviesViewController: UIViewController {
         self.customTitle = title
         self.needToReloadOnWillAppear = needToReloadOnWillAppear
         
-        super.init(nibName: MoviesViewController.className, bundle: nil)
+        super.init(nibName: "MoviesViewController", bundle: nil)
     }
 
     required init?(coder aDecoder: NSCoder) {
