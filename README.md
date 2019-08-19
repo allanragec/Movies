@@ -11,6 +11,7 @@ Movies app written in Swift 4 using the TMDb API.
 2. Run `$ pod install` in root of project directory.
 3. This will download the project dependencies and create a .xcworkspace
 file, use that file to open the project in Xcode.
+4. You need to create an API Key in https://www.themoviedb.org/ and put in Setting.swift file in API_KEY constant.
 
 ## Third-party libraries
 
